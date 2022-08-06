@@ -1,0 +1,5 @@
+# get table
+# the 3 hash tags are to start a new request
+
+###
+GET http://localhost:4000/products
