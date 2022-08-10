@@ -143,7 +143,7 @@ db.connect( (err) => {
 });
 
 // Register
-app.post('/register',bodyParser.json(), 
+app.post('/registerpost',bodyParser.json(), 
     async (req, res)=> {
     try{
         const bd = req.body; 
