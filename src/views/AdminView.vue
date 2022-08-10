@@ -52,7 +52,7 @@
     <tbody>
 
         <tr v-for="(product, index) in products" :key="index">
- <td>{{product.Product_id}}</td>
+ <td class="px-3">{{product.Product_id}}</td>
   <td>{{product.title}}</td>
     <td>R{{product.bookName}}</td>
     <td><img class="rounded text-center justify-content-center mx-1" :src="product.img" alt="" defer></td>
@@ -98,6 +98,7 @@ mounted() {
 </script>
 
 <style scoped>
+
 #table{
     border-top: 0.5px solid rgba(128, 128, 128, 0.282);
 }
@@ -110,4 +111,5 @@ img{
   font-size: 13px;
   font-weight: bold;
 }
+
 </style>
