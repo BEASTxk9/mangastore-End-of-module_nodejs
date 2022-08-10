@@ -6,7 +6,7 @@
 <!-- nav -->
 <div class="row justify-content-center pt-3">
   <!-- ___________ -->
-        <div id="table" class="col-sm-1">
+        <div id="table" class="col-sm-1 mb-1">
             <p>ADMIN</p>
         </div>
 <!-- __________ -->
@@ -28,7 +28,7 @@
 <div class="row justify-content-center">
 
 <!-- side nav -->
-<div id="sidenav" class="col-sm-1 text-start">
+<div id="table" class="col-sm-1 text-start">
 <nav>
 
 <a href="#">hello</a>
