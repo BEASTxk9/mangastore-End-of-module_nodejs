@@ -2,5 +2,19 @@
 # the 3 hash tags are to start a new request
 
 ###
-GET http://localhost:4000/products
+GET http://localhost:4000/view-products
 
+### 
+POST http://localhost:4000/products
+Content-Type: application/json
+
+{
+    "title": "J",
+    "bookName": "Python",
+    "category": "dh",
+    "description": "jsj",
+    "img": "kjskj",
+     "price": 78,
+     "datereleased": "2022/08/10",
+     "created_by": "Shane"
+}

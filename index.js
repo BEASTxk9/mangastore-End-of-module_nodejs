@@ -6,6 +6,7 @@ const cors = require('cors');
 const path = require('path');
 const db = require('./config/dbconn');
 const { compare, hash } = require('bcrypt');
+const { stringify } = require('querystring');
 
 // variable add express
 const app = express();
@@ -56,11 +57,16 @@ router.get('/login', (req, res) => {
     res.status(200).sendFile('./views/login.html', {root:__dirname} );
 });
 
+// products
+router.get('/products', (req, res) => {
+    res.status(200).sendFile('./views/products.html', {root:__dirname} );
+});
+
 // ___________________
 // mysql (post get delete) data
 
 // get all products
-router.get('/products', (req, res) => {
+router.get('/view-products', (req, res) => {
     // mysql query
     const strQry = `
     SELECT Product_id, title, bookName, category, description, img, price, datereleased, created_by  from products;
@@ -79,7 +85,7 @@ router.get('/products', (req, res) => {
 });
 
 // get 1 product
-router.get('/products/:id', (req, res) => {
+router.get('/view-products/:id', (req, res) => {
      // mysql query
      const strQry = `
      SELECT Product_id, title, bookName, category, description, img, price, datereleased, created_by  from products where Product_id = ?;
@@ -94,6 +100,36 @@ router.get('/products/:id', (req, res) => {
         })
     });
 
+});
+
+// create product
+router.post('/products', bodyParser.json(), 
+    (req, res)=> {
+    try{
+        
+        const {title, bookName, category, description,img,price,datereleased,created_by} = req.body; 
+        console.log(title);
+        // bd.totalamount = bd.quantity * bd.price;
+        // Query
+        const strQry = 
+        `
+        INSERT INTO products(title, bookName, category, description, img, price, datereleased, created_by)
+        VALUES(?, ?, ?, ?, ?, ?, ?, ?);
+        `;
+        //
+        db.query(strQry, 
+            [title, bookName, category, description,img,price,datereleased,created_by],
+            (err, results)=> {
+                if(err){
+console.log(err)
+                } else{
+                    res.send(`number of affected row/s: ${results.affectedRows}`);
+                }
+              
+            })
+    }catch(e) {
+        console.log(`Create a new product: ${e.message}`);
+    }
 });
 
 // ___________________
@@ -154,7 +190,7 @@ app.post('/login', bodyParser.json(),
 
             switch(true){
                 case (await compare(password,results[0].password)):
-                    res.send("alert('Well done')");
+                    res.send(`<a href="/products">Welcom. Click...</a>`);
                 // res.send("Welcome "+results[0].firstname)
                 break
                 default: 
@@ -173,5 +209,9 @@ app.post('/login', bodyParser.json(),
     }
 })
 
-console.log(bodyParser.json())
+
+module.exports = {  
+    devServer: {    
+     Proxy: '*'  }
+  }
 
