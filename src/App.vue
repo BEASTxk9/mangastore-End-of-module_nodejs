@@ -3,6 +3,17 @@
 <Nav></Nav>
 
   <router-view/>
+
+ <footer>
+  <div class="container py-1">
+    <div class="row justify-content-center">
+      <div class="col-sm-8">
+        <p>&copy; Made by Shane Stevens & Ikhlaas Rawoot.</p>
+      </div>
+    </div>
+  </div>
+ </footer>
+ 
 </template>
 
 <script>
@@ -24,16 +35,15 @@ export default{
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+footer{
+  background-color: black;
+  color: white;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+/* scroll */
+/* width */
+::-webkit-scrollbar {
+    width: 100%;
+    background-color: transparent;
 }
 </style>

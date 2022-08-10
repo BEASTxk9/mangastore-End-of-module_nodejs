@@ -35,15 +35,15 @@ fetchUsers: async (content) => {
 
     //Signup
     signUp: async (context, playload)=> {
-      let {firstname, lastname, gender, address, userole, email, userpassword} = playload;
+      let {fullname, email,  password, userole, phone_number, join_date} = playload;
       const data = {
-        firstname, 
-        lastname, 
-        gender,
-        address,
+        fullname, 
+        email, 
+        password,
+        userRole,
         userole, 
-        email,
-        userpassword
+        phone_number,
+        join_date
       };
       let res = await axios.post(picknpayUrl+"register", data);
       let results = await res.data;

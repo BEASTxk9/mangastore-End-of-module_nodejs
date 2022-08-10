@@ -15,6 +15,6 @@ mounted() {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
