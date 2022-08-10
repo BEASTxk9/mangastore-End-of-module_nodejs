@@ -57,7 +57,7 @@ fetchUsers: async (content) => {
 
 // get products
     getproducts: async (context) => {
-      let res = await fetch('https://mangastore-end-of-module.herokuapp.com/products');
+      let res = await fetch('https://mangastore-end-of-module.herokuapp.com/view-products');
       let data = await res.json();
       let result = data.results;
       if(result){

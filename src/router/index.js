@@ -36,7 +36,12 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: () => import('../views/ContactView.vue')
-  }
+  },
+  {
+    path: '/admintable',
+    name: 'admintable',
+    component: () => import('../components/AdminTableView.vue')
+  },
 ]
 
 const router = createRouter({
