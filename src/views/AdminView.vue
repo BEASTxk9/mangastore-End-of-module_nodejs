@@ -9,12 +9,10 @@
             <p>ADMIN</p>
         </div>
 
-        <div id="table" class="col-sm-8">
+        <div id="table" class="col-sm-10">
 
   <h6 id="logo" class="py-1 text-end">
-            <span id="s1">P</span><span id="s5">ick</span
-            ><span id="s2">'n <span id="s3">P</span>ay</span>
-            <span id="s4">Online</span>
+           LOGO UNDECIDED YET
           </h6>
         
               
@@ -27,10 +25,9 @@
 <div id="sidenav" class="col-sm-1 text-start">
 <nav>
 
-    <router-link to="/products">Shop</router-link><br>
-      <router-link to="/Admin"><i class="fa-solid fa-user"></i></router-link>
 
-  </nav>
+
+</nav>
 </div>
 <!-- table -->
 <div id="table" class="col-sm-10">
@@ -90,7 +87,23 @@ mounted() {
 }
 </script>
 
-<style>
+<style scoped>
+#table{
+    border-left: 0.5px solid rgba(128, 128, 128, 0.282);
+    border-top: 0.5px solid rgba(128, 128, 128, 0.282);
+    border-right: 0.5px solid rgba(128, 128, 128, 0.282);
+}
+
+thead{
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.282);
+    font-size: 1.5rem;
+}
+
+#sidenav{
+       border-top: 0.5px solid rgba(128, 128, 128, 0.282);
+           border-left: 0.5px solid rgba(128, 128, 128, 0.282);
+}
+
 img{
   height: 10vh;
 }
