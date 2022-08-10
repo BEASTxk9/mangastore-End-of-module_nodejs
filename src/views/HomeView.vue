@@ -39,4 +39,6 @@ export default {
 #login_register{
 height: 88.2vh;
 }
+
+
 </style>

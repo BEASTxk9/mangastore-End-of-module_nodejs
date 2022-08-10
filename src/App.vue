@@ -40,10 +40,4 @@ footer{
   color: white;
 }
 
-/* scroll */
-/* width */
-::-webkit-scrollbar {
-    width: 100%;
-    background-color: transparent;
-}
 </style>
