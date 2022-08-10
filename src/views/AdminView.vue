@@ -25,12 +25,12 @@
 <div id="sidenav" class="col-sm-1 text-start">
 <nav>
 
-
+<a href="#">hello</a>
 
 </nav>
 </div>
 <!-- table -->
-<div class="col-sm-12">
+<div class="col-sm-11">
 <table class="table table-bordered">
     <thead class="table-bordered">
         <th>ID</th>
