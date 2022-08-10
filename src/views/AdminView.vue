@@ -5,7 +5,7 @@
 
 <!-- nav -->
 <div class="row justify-content-center pt-3">
-        <div class="col-sm-1">
+        <div id="sidenav" class="col-sm-1">
             <p>ADMIN</p>
         </div>
 
@@ -22,7 +22,7 @@
 
 <div class="row justify-content-center">
 <!-- side nav -->
-<div class="col-sm-1 text-start">
+<div id="sidenav" class="col-sm-1 text-start">
 <nav>
 
 
@@ -90,6 +90,10 @@ mounted() {
 <style scoped>
 #table{
     border-top: 0.5px solid rgba(128, 128, 128, 0.282);
+}
+
+#sidenav{
+       border-top: 0.5px solid rgba(128, 128, 128, 0.282);
 }
 
 img{
