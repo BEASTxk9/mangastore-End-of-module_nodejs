@@ -5,22 +5,28 @@
 
 <!-- nav -->
 <div class="row justify-content-center pt-3">
-        <div id="sidenav" class="col-sm-1">
+  <!-- ___________ -->
+        <div id="table" class="col-sm-1">
             <p>ADMIN</p>
         </div>
-
-<div id="table" class="col-sm-11">
+<!-- __________ -->
+        <div id="table" class="col-sm-2">
+<addproduct></addproduct>
+        </div>
+<!-- _________ -->
+<div id="table" class="col-sm-9">
 
   <h6 id="logo" class="py-1 text-end">
-           LOGO UNDECIDED YET
-          </h6>
+  LOGO UNDECIDED YET
+  </h6>
         
               
         </div>
     </div>
 
-
+<!-- ____________________ -->
 <div class="row justify-content-center">
+
 <!-- side nav -->
 <div id="sidenav" class="col-sm-1 text-start">
 <nav>
@@ -74,8 +80,12 @@
 </template>
 
 <script>
+import addproduct from '../components/AddProductView.vue'
 
 export default {
+components:{
+addproduct
+},
 mounted() {
         this.$store.dispatch("getproducts")
     },
@@ -90,10 +100,6 @@ mounted() {
 <style scoped>
 #table{
     border-top: 0.5px solid rgba(128, 128, 128, 0.282);
-}
-
-#sidenav{
-       border-top: 0.5px solid rgba(128, 128, 128, 0.282);
 }
 
 img{
