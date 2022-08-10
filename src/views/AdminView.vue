@@ -57,7 +57,7 @@
     <td>R{{product.bookName}}</td>
     <td><img class="rounded text-center justify-content-center mx-1" :src="product.img" alt="" defer></td>
     <td>{{product.category}}</td>
-    <td id="description">{{product.description}}</td>
+    <td id="description">"{{product.description}}"</td>
       <td>R{{product.price}}</td>
         <td>{{product.datereleased}}</td>
           <td>{{product.created_by}}</td>
@@ -106,5 +106,8 @@ img{
   height: 10vh;
 }
 
-
+#description{
+  font-size: 13px;
+  font-weight: bold;
+}
 </style>
