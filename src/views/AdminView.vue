@@ -4,12 +4,12 @@
 <div class="container" v-if="products">
 
 <!-- nav -->
-    <div class="row justify-content-center pt-3">
+<div class="row justify-content-center pt-3">
         <div id="sidenav" class="col-sm-1">
             <p>ADMIN</p>
         </div>
 
-        <div id="table" class="col-sm-11">
+<div id="table" class="col-sm-11">
 
   <h6 id="logo" class="py-1 text-end">
            LOGO UNDECIDED YET
