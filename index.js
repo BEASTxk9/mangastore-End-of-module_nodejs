@@ -103,7 +103,7 @@ router.get('/view-products/:id', (req, res) => {
 });
 
 // create product
-router.post('/products', bodyParser.json(), 
+app.post('/products', bodyParser.json(), 
     (req, res)=> {
     try{
         
