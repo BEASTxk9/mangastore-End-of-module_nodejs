@@ -10,11 +10,13 @@
 
 <form @submit.prevent="signUp" method="POST">
 
-     <input type="email" v-model="email" placeholder="email" required><br>
+<label for="email">Email:</label><br>
+     <input type="email" v-model="email" placeholder="Enter your email" required><br>
 
-    <input type="password" v-model="password" placeholder="password" required><br>
+<label for="password">Password</label><br>
+    <input type="password" v-model="password" placeholder="Enter your password" required><br>
 
-    <button v-on:click="submit">Login</button>
+    <button class="mt-4" v-on:click="submit">Login</button>
 
 </form>
 

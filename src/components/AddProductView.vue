@@ -32,25 +32,25 @@
 <form action="https://mangastore-end-of-module.herokuapp.com/products" method="POST">
 
 <label for="title">Title</label><br>
-    <input type="text" v-model="title" placeholder="title" required><br>
+    <input type="text" v-model="title" placeholder="Enter title" required><br>
 
 <label for="bookName">Book Name:</label><br>
-    <input type="text" v-model="bookName" placeholder="bookName" required><br>
+    <input type="text" v-model="bookName" placeholder="Enter the Book Name" required><br>
 
 <label for="category">Category:</label><br>
-    <input type="text" v-model="category" placeholder="category" required><br>
+    <input type="text" v-model="category" placeholder="Enter category" required><br>
 
 <label for="description">Description:</label><br>
-    <input type="text" v-model="description" placeholder="description" required><br>
+    <input type="text" v-model="description" placeholder="Enter description" required><br>
 
 <label for="img">Image:</label><br>
-    <input type="text" v-model="img" placeholder="img" required><br>
+    <input type="text" v-model="img" placeholder="Add image url" required><br>
 
 <label for="price">Price:</label><br>
-    <input type="number" v-model="price" placeholder="price" required><br>
+    <input type="number" v-model="price" placeholder="Enter price" required><br>
 
 <label for="datereleased">Date Released:</label><br>
-    <input type="date" id="date" v-model="datereleased" placeholder="datereleased" required><br>
+    <input type="date" id="date" v-model="datereleased" placeholder="Enter date of book released" required><br>
 
 <label for="created_by">Created by:</label><br>
     <input type="text" v-model="created_by" placeholder="created_by" required><br>
