@@ -10,7 +10,7 @@
 
 <form @submit.prevent="signUp" method="POST">
 
-     <input type="text" v-model="email" placeholder="email" required><br>
+     <input type="email" v-model="email" placeholder="email" required><br>
 
     <input type="password" v-model="password" placeholder="password" required><br>
 

@@ -7,21 +7,32 @@
         <div class="col-sm-8">
 <h1>REGISTER</h1>
 
-            <form @submit.prevent="signUp" action="https://mangastore-end-of-module.herokuapp.com/register" method="POST">
+            <form @submit="signUp">
 
+<label for="fullname">Name:</label><br>
 <input type="text" v-model="fullname" id="fullname" placeholder="fullname" required><br>
 
-<input type="text" v-model="email" id="email" placeholder="email" required><br>
+<label for="email">Email:</label><br>
+<input type="email" v-model="email" id="email" placeholder="email" required><br>
 
+<label for="password">Password:</label><br>
 <input type="password" v-model="password" id="password" placeholder="password" required><br>
 
-<input type="text" v-model="userRole" id="userRole" placeholder="userRole" required><br>
+<label for="userRole">User Role:</label><br>
 
-<input type="text" v-model="phone_number" id="phone_number" placeholder="phone_number" required><br>
+<select v-model="userRole" id="userRole" aria-placeholder="SELECT" required>
+<option value="user">User</option>
+<option value="admin">Admin</option>
+</select>
+<br>
 
-<input type="text" v-model="join_date" id="join_date" placeholder="join_date" required><br>
+<label for="phone_number">Phone Number:</label><br>
+<input type="number" v-model="phone_number" id="phone_number" placeholder=" Enter your phone number" required><br>
 
-<button v-on:click="submit">Register</button>
+<label for="date">Date:</label><br>
+<input type="date" v-model="join_date" id="join_date" placeholder="Enter current date" required><br>
+
+<button class="mt-4" v-on:click="submit">Register</button>
 
             </form>
         </div>
@@ -38,5 +49,9 @@ export default {
 </script>
 
 <style scoped>
-
+select, #join_date{
+    width: 65%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
 </style>

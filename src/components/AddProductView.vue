@@ -25,29 +25,37 @@
           </div>
           <div class="modal-body">
             <div class="container">
-              <div class="row">
+              <div class="row justify-content-center">
               
                    <div class="col-sm-8">
 
 <form action="https://mangastore-end-of-module.herokuapp.com/products" method="POST">
 
+<label for="title">Title</label><br>
     <input type="text" v-model="title" placeholder="title" required><br>
 
+<label for="bookName">Book Name:</label><br>
     <input type="text" v-model="bookName" placeholder="bookName" required><br>
 
+<label for="category">Category:</label><br>
     <input type="text" v-model="category" placeholder="category" required><br>
 
+<label for="description">Description:</label><br>
     <input type="text" v-model="description" placeholder="description" required><br>
 
+<label for="img">Image:</label><br>
     <input type="text" v-model="img" placeholder="img" required><br>
 
+<label for="price">Price:</label><br>
     <input type="number" v-model="price" placeholder="price" required><br>
 
-    <input type="text" v-model="datereleased" placeholder="datereleased" required><br>
+<label for="datereleased">Date Released:</label><br>
+    <input type="date" id="date" v-model="datereleased" placeholder="datereleased" required><br>
 
+<label for="created_by">Created by:</label><br>
     <input type="text" v-model="created_by" placeholder="created_by" required><br>
 
-    <button type="submit">Add product</button>
+    <button class="mt-4" type="submit">Add product</button>
 
 </form>
 
@@ -121,5 +129,11 @@ export default {
     color: rgb(255, 255, 255);
   transition: all 0.5s ease-in-out;
  box-shadow: 0px 0px 50px 3px rgba(0, 206, 255, 0.7);
+}
+
+#date{
+    width: 72%;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 </style>

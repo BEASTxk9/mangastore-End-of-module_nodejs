@@ -1,7 +1,7 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
-// Picknpay url
-const picknpayUrl = "https://mangastore-end-of-module.herokuapp.com/";
+// mangastoreurl
+const mangastoreurl = "https://mangastore-end-of-module.herokuapp.com/";
 
 export default createStore({
   state: {
@@ -24,7 +24,7 @@ export default createStore({
   actions: {
     // get users
 fetchUsers: async (content) => {
-  let res = await axios.post(picknpayUrl+"register", data);
+  let res = await axios.post(mangastoreurl+"register", data);
   let {results } = await res.data;
   if(results) {
     content.commit('setUsers', results);
@@ -45,11 +45,11 @@ fetchUsers: async (content) => {
         phone_number,
         join_date
       };
-      let res = await axios.post(picknpayUrl+"register", data);
+      let res = await axios.post("https://mangastore-end-of-module.herokuapp.com/register", data);
       let results = await res.data;
       console.log(results);
       if(results) {
-        context.commit('setUsers', results);
+        console.log('setUsers', results);
       }else {
         console.error("No dota");
       }
@@ -66,7 +66,7 @@ fetchUsers: async (content) => {
         console.log('loading...')
       }
     },
-    
+
   },
   modules: {
   }

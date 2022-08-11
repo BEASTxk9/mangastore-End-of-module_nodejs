@@ -27,7 +27,6 @@ import registerform from '../components/RegisterFormView';
 import loginform from '../components/LoginFormView.vue';
 
 export default {
-  name: 'HomeView',
   components: {
   registerform,
   loginform
