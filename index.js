@@ -69,7 +69,7 @@ router.get('/products', (req, res) => {
 router.get('/view-products', (req, res) => {
     // mysql query
     const strQry = `
-    SELECT Product_id, title, bookName, category, description, img, price, datereleased, created_by  from products;
+    SELECT Product_id, title, bookName, category, description, img, price, datereleased, created_by, img2 from products;
     `;
 
     // error controll
@@ -88,7 +88,7 @@ router.get('/view-products', (req, res) => {
 router.get('/view-products/:id', (req, res) => {
      // mysql query
      const strQry = `
-     SELECT Product_id, title, bookName, category, description, img, price, datereleased, created_by  from products where Product_id = ?;
+     SELECT Product_id, title, bookName, category, description, img, price, datereleased, created_by, img2  from products where Product_id = ?;
      `;
 
       // error controll
@@ -107,18 +107,18 @@ app.post('/products', bodyParser.json(),
     (req, res)=> {
     try{
         
-        const {title, bookName, category, description,img,price,datereleased,created_by} = req.body; 
+        const {title, bookName, category, description,img,price,datereleased,created_by, img2} = req.body; 
         console.log(title);
         // bd.totalamount = bd.quantity * bd.price;
         // Query
         const strQry = 
         `
-        INSERT INTO products(title, bookName, category, description, img, price, datereleased, created_by)
-        VALUES(?, ?, ?, ?, ?, ?, ?, ?);
+        INSERT INTO products(title, bookName, category, description, img, price, datereleased, created_by, img2)
+        VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);
         `;
         //
         db.query(strQry, 
-            [title, bookName, category, description,img,price,datereleased,created_by],
+            [title, bookName, category, description,img,price,datereleased,created_by, img2],
             (err, results)=> {
                 if(err){
 console.log(err)
@@ -131,6 +131,36 @@ console.log(err)
         console.log(`Create a new product: ${e.message}`);
     }
 });
+
+// Update product
+app.put('/products', (req, res)=> {
+    const bd = req.body;
+    // Query
+    const strQry = 
+    `UPDATE products
+     SET ?
+     WHERE id = ?`;
+
+    db.query(strQry,[bd.id], (err, data)=> {
+        if(err) throw err;
+        res.send(`number of affected record/s: ${data.affectedRows}`);
+    })
+});
+
+// Delete product
+app.delete('/products/:id', (req, res)=> {
+    // Query
+    const strQry = 
+    `
+    DELETE FROM products 
+    WHERE Product_id = ?;
+    `;
+    db.query(strQry,[req.params.Product_id], (err, data, fields)=> {
+        if(err) throw err;
+        res.send(`${data.affectedRows} row was affected`);
+    })
+});
+
 
 // ___________________
 // login & register
