@@ -65,7 +65,7 @@
           <td>{{product.created_by}}</td>
           <td>
             <form @submit.prevent="deleteProduct" method="DELETE">
-              <button v-on:click="submit">Delete Product</button>
+              <button class="b btn-layout" v-on:click="submit">Delete Product</button>
             </form>
           </td>
       
@@ -181,5 +181,71 @@ font-family: 'Titan One', cursive;
 #sub-text{
 font-family: 'Titan One', cursive;
 font-size: 9px;
+}
+
+/* button */
+.b:before{
+  text-align: center;
+    transition: all 0.3s ease-in-out;
+	content: ""; 
+	width: 0; 
+	height: 100%; 
+	position: absolute; 
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	left: 0; 
+	top: 0; 
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s; 
+	z-index: -1;
+}
+
+.b:hover:before{
+	color: rgb(255, 255, 255);
+    box-shadow: 12px 31px 37px rgba(255, 255, 255, 0.5);
+	width: 100%; 
+	left: auto; 
+	right: 0;
+  
+}
+
+.btn-layout{	
+  text-align: center;	
+	display: inline-flex;
+	margin: 0 5px 0 0;		
+	position: relative;
+	opacity: 0.999;
+	padding: 5px 5px;		
+	text-align:center;
+	color: rgb(0, 0, 0);
+	border-radius:3px;		
+	border: none;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+	-webkit-transition: 0.3s;
+    transition: 0.3s;
+	overflow:hidden; 
+}
+
+.btn-layout:hover{
+    color: rgb(255, 255, 255);
+  transition: all 0.5s ease-in-out;
+ box-shadow: 0px 0px 50px 3px rgba(0, 206, 255, 0.7);
+}
+
+#date{
+    width: 72%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+button{
+  font-family: 'Titan One', cursive;
+  font-weight: 500;
+  font-size: 12px;
 }
 </style>
