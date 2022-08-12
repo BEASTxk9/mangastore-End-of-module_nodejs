@@ -220,7 +220,8 @@ app.post('/login', bodyParser.json(),
 
             switch(true){
                 case (await compare(password,results[0].password)):
-                    res.send(`<a href="/products">Welcom. Click...</a>`);
+                    res.redirect('/products')
+                    // res.send(`<a href="/products">Welcom. Click...</a>`);
                 // res.send("Welcome "+results[0].firstname)
                 break
                 default: 
