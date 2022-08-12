@@ -147,10 +147,7 @@ getproducts: async (context) => {
     }
     },
 
-
-
-
-
+// get single product
     getproduct: async (context, Product_id) => {
       // Product_id = 1
       fetch('https://mangastore-end-of-module.herokuapp.com/view-products/' + Product_id)
@@ -159,7 +156,7 @@ getproducts: async (context) => {
       console.log(data)
         context.commit("setproduct", data.results);
       })
-    }
+    },
 
   },
   modules: {
