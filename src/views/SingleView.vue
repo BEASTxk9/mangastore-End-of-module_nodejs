@@ -1,6 +1,7 @@
 <template>
 <div v-if="product">
 <div class="container">
+    <h2>{{ product[0].title }} {{ product[0].bookName }}</h2>
    <div class="row mx-auto">
     <div class="col-md-6">
         <div class="wrapper">
@@ -17,7 +18,6 @@
         </div>
     </div>
     <div class="col-md-6 mx-auto">
-        <h2>{{ product[0].title }} {{ product[0].bookName }}</h2>
         <p>{{ product[0].description }}</p>
         <p>{{ product[0].category}}</p>
         <p>{{ product[0].datereleased}}</p>
@@ -65,7 +65,7 @@ h1 {
 }
 
 .wrapper {
-    max-width: calc(100% / 4);
+    /* max-width: calc(100% / 4); */
     min-width: 10em;
     
 }
@@ -87,7 +87,7 @@ h1 {
 }
 
 .book:hover .book__cover {
-    transform: rotateY(50deg);
+    transform: rotateY(60deg);
     z-index: 999;
     box-shadow: 20px 10px 50px rgba(0, 0, 0, 0.2);
 }
@@ -105,6 +105,9 @@ h1 {
     background-size: 180px 255px;
     /*    animation: 3s infinite alternate floating; */
 
+}
+.back{
+    background-color: black;
 }
 
 .book__detail {
@@ -158,6 +161,10 @@ h1 {
     100% {
         transform: translatey(0px);
     }
+}
+.container{
+    border-left: solid rgb(104,35,162);
+  border-right: solid rgb(104,35,162);
 }
 
 /* @keyframes shadow {

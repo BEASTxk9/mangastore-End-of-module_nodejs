@@ -1,7 +1,7 @@
 <template>
     <div class="container" v-if="products">
         <div class="row">
-            <div class="col-sm-3" v-for="(product, index) in products" :key="index">
+            <div class="col-sm-3 p-0" v-for="(product, index) in products" :key="index">
                 <!-- <td>{{product.title}}</td>
     <td>{{product.bookName}}</td>
     <td></td>
@@ -62,7 +62,7 @@ h1 {
 }
 
 .wrapper {
-    max-width: calc(100% / 4);
+    /* max-width: calc(100% / 4); */
     min-width: 10em;
 }
 
