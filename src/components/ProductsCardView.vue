@@ -100,7 +100,6 @@ h1 {
     transform-origin: right center 0px;
     background-size: 180px 255px;
     /*    animation: 3s infinite alternate floating; */
-
 }
 
 .book__detail {
