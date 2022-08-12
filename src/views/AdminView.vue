@@ -167,7 +167,7 @@ img{
 }
 
 #logo{
-  color: purple;
+  color: plum;
 }
 
 #logo-text{
@@ -176,11 +176,13 @@ font-family: 'Titan One', cursive;
   font-weight: 900;
   font-size: 1.3rem;
   margin-top: 10px;
+  color: rgb(128, 0, 128);
 }
 
 #sub-text{
 font-family: 'Titan One', cursive;
 font-size: 9px;
+color: black;
 }
 
 /* button */
