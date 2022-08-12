@@ -19,8 +19,8 @@ export default createStore({
       state.users = values
     },
 
-    setproducts: (state, products) => {
-      state.products = products
+    setproducts(state, values) {
+      state.products = values
     },
   },
   actions: {
@@ -59,7 +59,6 @@ export default createStore({
           password: password,
         }),
       })
-
       if(result){
         router.push({name: "landing"})
       } else {
@@ -67,8 +66,6 @@ export default createStore({
         error`
       }
     },
-
-
 
 // get products
     getproducts: async (context) => {
@@ -80,6 +77,36 @@ export default createStore({
       }else{
         console.log('loading...')
       }
+    },
+    
+     // add product
+     addProduct: async(context, payload) => {
+      const {title, bookName, category, description,img,price,datereleased,created_by, img2 } = payload;
+      
+      try{
+        await fetch(mangastoreurl+"products", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+        body: JSON.stringify({
+          title : title,
+           bookName : bookName,
+           category : category,
+           description : description,
+          img : img,
+          price : price,
+          datereleased : datereleased,
+          created_by : created_by,
+           img2 : img2
+        }),
+      })
+        .then((response) => response)
+        .then((json) => context.commit("setproducts", json.data));
+        router.push({name: "admin"})
+      }catch(e) {
+      console.log(e);
+    }
     },
 
   },

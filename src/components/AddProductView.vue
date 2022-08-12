@@ -29,7 +29,7 @@
               
                    <div class="col-sm-8">
 
-<form action="https://mangastore-end-of-module.herokuapp.com/products" method="POST">
+<form @submit.prevent="addProduct" method="POST">
 
 <label for="title">Title</label><br>
     <input type="text" v-model="title" placeholder="Enter title" required><br>
@@ -55,7 +55,10 @@
 <label for="created_by">Created by:</label><br>
     <input type="text" v-model="created_by" placeholder="created_by" required><br>
 
-    <button class="mt-4" type="submit">Add product</button>
+    <label for="img2">image 2:</label><br>
+    <input type="text" v-model="img2" placeholder="img2" required><br>
+
+    <button class="mt-4" @click="submit">Add product</button>
 
 </form>
 
@@ -72,7 +75,35 @@
 
 <script>
 export default {
-
+data(){
+    return{
+        title : "",
+           bookName : "",
+           category : "",
+           description : "",
+          img : "",
+          price : "",
+          datereleased : "",
+          created_by : "",
+           img2 : "",
+    }
+},
+methods: {
+addProduct(){
+this.$store.dispatch('addProduct', {
+                 title : this.title,
+           bookName : this.bookName,
+           category : this.category,
+           description : this.description,
+          img : this.img,
+          price : this.price,
+          datereleased : this.datereleased,
+          created_by : this.created_by,
+           img2 : this.img2
+            })
+            
+}
+}
 }
 </script>
 
