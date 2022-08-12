@@ -7,12 +7,12 @@
   <div class="row justify-content-center">
 
 <!-- register -->
-    <div class="col-sm-5">
+    <div id="card" class="col-sm-12 col-md-5 mx-1">
       <registerform></registerform>
     </div>
 
 <!-- login -->
-    <div class="col-sm-5">
+    <div id="card" class="col-sm-12 col-md-5 mx-1">
       <loginform></loginform>
     </div>
 
@@ -32,11 +32,26 @@ export default {
   loginform
   }
 }
+
+
 </script>
 
 <style scoped>
 #login_register{
-height: 88.2vh;
+padding-bottom: 17vh;
+}
+
+#card{
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: antiquewhite;
+  border: 0.5px solid grey;
+  border-radius: 10px;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 

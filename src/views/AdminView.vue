@@ -62,7 +62,11 @@
       <td>R{{product.price}}</td>
         <td>{{product.datereleased}}</td>
           <td>{{product.created_by}}</td>
-          <td></td>
+          <td>
+            <form @submit.prevent="deleteProduct" method="DELETE">
+              <button v-on:click="submit">Delete Product</button>
+            </form>
+          </td>
       
         </tr>
 
@@ -95,7 +99,29 @@ mounted() {
         products() {
             return this.$store.state.products
         }
-        }
+        },
+        data(){
+    return{
+       fullname: '',
+       email: '',
+       password: '',
+       userRole: '',
+       phone_number: '',
+       join_date: '',
+    }
+},
+methods: {
+deleteProduct(){
+this.$store.dispatch('deleteProduct', {
+                fullname: this.fullname,
+                email: this.email, 
+                password: this.password,
+                userRole: this.userRole, 
+                phone_number: this.phone_number,
+                join_date: this.join_date,
+            })
+}
+}
 }
 </script>
 

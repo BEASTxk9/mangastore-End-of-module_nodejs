@@ -43,13 +43,12 @@ export default createStore({
         }),
       })
         .then((response) => response.json())
-        .then((json) => context.commit("setUser", json));
-        alert('Register was Successfull.')
+        .then((json) => context.commit("setUser", json), alert(`Your Registration was Successfull. Welcome!`));
     },
 
 // login
     login: async(context, payload) => {
-      const { fullname, email, password, userRole, phone_number, join_date } = payload;
+      const {  email, password } = payload;
       let result = await fetch(mangastoreurl+"login", {
         method: "POST",
         headers: {
@@ -68,6 +67,7 @@ export default createStore({
       }
     },
 
+// _______________
 // get products
     getproducts: async (context) => {
       let res = await fetch('https://mangastore-end-of-module.herokuapp.com/view-products');
@@ -110,6 +110,37 @@ export default createStore({
       console.log(e);
     }
     },
+
+        // delete product
+        deleteProduct: async(context, payload) => {
+          const {title, bookName, category, description,img,price,datereleased,created_by, img2 } = payload;
+          
+          try{
+            await fetch(mangastoreurl+"products/:id", {
+            method: "DELETE",
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+            body: JSON.stringify({
+              title : title,
+               bookName : bookName,
+               category : category,
+               description : description,
+              img : img,
+              price : price,
+              datereleased : datereleased,
+              created_by : created_by,
+               img2 : img2
+            }),
+          })
+            .then((response) => response.json)
+            .then((json) => context.commit("setproducts", json.data));
+            // router.push({name: "admin"});
+            
+          }catch(e) {
+          console.log(e);
+        }
+        },
 
   },
   modules: {
