@@ -7,6 +7,7 @@ const path = require('path');
 const db = require('./config/dbconn');
 const { compare, hash } = require('bcrypt');
 const { stringify } = require('querystring');
+const jwt = require('jsonwebtoken');
 
 // variable add express
 const app = express();
@@ -217,13 +218,17 @@ app.post('/login', bodyParser.json(),
 
             switch(true){
                 case (await compare(password,results[0].password)):
+                    const key = jwt.sign(JSON.stringify(results[0]), process.env.secret);
+                            res.json({
+                                status: 200,
+                                results: key,
+                            });
                     res.redirect('/products')
                 // res.send("Welcome "+results[0].firstname)
                 break
                 default: 
                 console.log("Bye");
             }
-
             // res.json({
             //     status: 200,
             //     results: (await compare(userpassword,
