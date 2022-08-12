@@ -7,7 +7,7 @@
         <div class="col-sm-8">
 <h1>REGISTER</h1>
 
-            <form @submit="signUp">
+            <form @submit.prevent="register" method="POST">
 
 <label for="fullname">Name:</label><br>
 <input type="text" v-model="fullname" id="fullname" placeholder="fullname" required><br>
@@ -44,6 +44,29 @@
 
 <script>
 export default {
+
+data(){
+    return{
+       fullname: '',
+       email: '',
+       password: '',
+       userRole: '',
+       phone_number: '',
+       join_date: '',
+    }
+},
+methods: {
+register(){
+this.$store.dispatch('register', {
+                fullname: this.fullname,
+                email: this.email, 
+                password: this.password,
+                userRole: this.userRole, 
+                phone_number: this.phone_number,
+                join_date: this.join_date,
+            })
+}
+}
 
 }
 </script>

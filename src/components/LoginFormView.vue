@@ -8,7 +8,7 @@
 
                 <h1>LOGIN</h1>
 
-<form @submit.prevent="signUp" method="POST">
+<form @submit.prevent="login" method="POST">
 
 <label for="email">Email:</label><br>
      <input type="email" v-model="email" placeholder="Enter your email" required><br>
@@ -29,7 +29,22 @@
 
 <script>
 export default {
+data(){
+    return{
+       email: '',
+       password: '',
+    }
+},
+methods: {
+login(){
+this.$store.dispatch('login', {
 
+                email: this.email, 
+                password: this.password,
+              
+            })
+}
+}
 }
 </script>
 

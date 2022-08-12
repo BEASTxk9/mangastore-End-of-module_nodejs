@@ -136,6 +136,7 @@ img{
 #description{
   font-size: 13px;
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
 
 
