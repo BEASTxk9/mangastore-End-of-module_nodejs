@@ -178,7 +178,7 @@ app.post('/register',bodyParser.json(),
      
         // Encrypting a password
         // Default value of salt is 10. 
-        bd.password = await hash(bd.password, 11);
+        bd.password = await hash(bd.password, 16);
         // Query
 
         const strQry = 
@@ -218,11 +218,11 @@ app.post('/login', bodyParser.json(),
 
             switch(true){
                 case (await compare(password,results[0].password)):
-                    const key = jwt.sign(JSON.stringify(results[0]), process.env.secret);
-                            res.json({
-                                status: 200,
-                                results: key,
-                            });
+                    // const key = jwt.sign(JSON.stringify(results[0]), process.env.secret);
+                    //         res.json({
+                    //             status: 200,
+                    //             results: key,
+                    //         });
                     res.redirect('/products')
                 // res.send("Welcome "+results[0].firstname)
                 break
