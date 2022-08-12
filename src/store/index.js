@@ -44,6 +44,7 @@ export default createStore({
       })
         .then((response) => response.json())
         .then((json) => context.commit("setUser", json));
+        alert('Register was Successfull.')
     },
 
 // login
@@ -101,9 +102,10 @@ export default createStore({
            img2 : img2
         }),
       })
-        .then((response) => response)
+        .then((response) => response.json)
         .then((json) => context.commit("setproducts", json.data));
-        router.push({name: "admin"})
+        router.push({name: "admin"});
+        
       }catch(e) {
       console.log(e);
     }

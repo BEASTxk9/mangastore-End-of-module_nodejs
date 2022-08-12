@@ -58,7 +58,8 @@
     <label for="img2">image 2:</label><br>
     <input type="text" v-model="img2" placeholder="img2" required><br>
 
-    <button class="mt-4" @click="submit">Add product</button>
+    <button class="mt-4" @click="submit" data-bs-target="#exampleModal"  data-bs-dismiss="modal"
+              aria-label="Close">Add product</button>
 
 </form>
 
@@ -101,7 +102,7 @@ this.$store.dispatch('addProduct', {
           created_by : this.created_by,
            img2 : this.img2
             })
-            
+
 }
 }
 }
