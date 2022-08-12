@@ -1,6 +1,6 @@
 <template>
 
-<button class="btn-layout b mt-1" data-bs-toggle="modal"
+<button class="btn-layout b mt-3" data-bs-toggle="modal"
           data-bs-target="#exampleModal">ADD PRODUCT</button>
 
 
@@ -44,7 +44,10 @@
     <input type="text" v-model="description" placeholder="Enter description" required><br>
 
 <label for="img">Image:</label><br>
-    <input type="text" v-model="img" placeholder="Add image url" required><br>
+    <input type="url" v-model="img" placeholder="Add image url" required><br>
+
+     <label for="img2">image 2:</label><br>
+    <input type="url" v-model="img2" placeholder="img2" required><br>
 
 <label for="price">Price:</label><br>
     <input type="number" v-model="price" placeholder="Enter price" required><br>
@@ -55,8 +58,7 @@
 <label for="created_by">Created by:</label><br>
     <input type="text" v-model="created_by" placeholder="created_by" required><br>
 
-    <label for="img2">image 2:</label><br>
-    <input type="text" v-model="img2" placeholder="img2" required><br>
+   
 
     <button class="mt-4" @click="submit" data-bs-target="#exampleModal"  data-bs-dismiss="modal"
               aria-label="Close">Add product</button>
@@ -167,5 +169,10 @@ this.$store.dispatch('addProduct', {
     width: 72%;
     padding-top: 3px;
     padding-bottom: 3px;
+}
+
+button{
+  font-family: 'Titan One', cursive;
+  font-weight: 500;
 }
 </style>

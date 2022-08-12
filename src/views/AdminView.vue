@@ -7,7 +7,7 @@
 <div class="row justify-content-center pt-3">
   <!-- ___________ -->
         <div id="table" class="col-sm-1 mb-1">
-            <p>ADMIN</p>
+            <p id="logo-text">ADMIN</p>
         </div>
 <!-- __________ -->
         <div id="table" class="col-sm-2">
@@ -16,9 +16,10 @@
 <!-- _________ -->
 <div id="table" class="col-sm-9">
 
-  <h6 id="logo" class="py-1 text-end">
-  LOGO UNDECIDED YET
+  <h6 id="logo-text" class="py-1 text-end">
+   <i id="logo" class="fa-solid fa-book-open"></i> | Unlimited Void
   </h6>
+  <p id="sub-text" class="text-end">manga at your fingertips</p>
         
               
         </div>
@@ -165,5 +166,20 @@ img{
   transition: all 0.3s ease-in-out;
 }
 
+#logo{
+  color: purple;
+}
 
+#logo-text{
+  font-family: 'IBM Plex Mono', monospace;
+font-family: 'Titan One', cursive;
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+#sub-text{
+font-family: 'Titan One', cursive;
+font-size: 9px;
+}
 </style>
