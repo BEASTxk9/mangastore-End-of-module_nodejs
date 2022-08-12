@@ -1,10 +1,15 @@
 <template>
-  <h1>store</h1>
+  <h1>Manga Catalogue</h1>
+  <card></card>
 </template>
 
 <script>
-export default {
+import card from '../components/ProductsCardView.vue';
 
+export default {
+components: {
+  card
+}
 }
 </script>
 
