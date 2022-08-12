@@ -3,11 +3,11 @@
 
 
 <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-sm-8">
 <h1>REGISTER</h1>
 
-            <form @submit="signUp">
+            <form @submit.prevent="register" method="POST">
 
 <label for="fullname">Name:</label><br>
 <input type="text" v-model="fullname" id="fullname" placeholder="fullname" required><br>
@@ -16,7 +16,7 @@
 <input type="email" v-model="email" id="email" placeholder="email" required><br>
 
 <label for="password">Password:</label><br>
-<input type="password" v-model="password" id="password" placeholder="password" required><br>
+<input type="password" v-model="password" id="password" placeholder="password" minlength="8" maxlength="15" required><br>
 
 <label for="userRole">User Role:</label><br>
 
@@ -27,7 +27,7 @@
 <br>
 
 <label for="phone_number">Phone Number:</label><br>
-<input type="number" v-model="phone_number" id="phone_number" placeholder=" Enter your phone number" required><br>
+<input type="tel" v-model="phone_number" id="phone_number" placeholder=" Enter your phone number" maxlength="10" required><br>
 
 <label for="date">Date:</label><br>
 <input type="date" v-model="join_date" id="join_date" placeholder="Enter current date" required><br>
@@ -45,7 +45,32 @@
 <script>
 export default {
 
+data(){
+    return{
+       fullname: '',
+       email: '',
+       password: '',
+       userRole: '',
+       phone_number: '',
+       join_date: '',
+    }
+},
+
+methods: {
+register(){
+this.$store.dispatch('register', {
+                fullname: this.fullname,
+                email: this.email, 
+                password: this.password,
+                userRole: this.userRole, 
+                phone_number: this.phone_number,
+                join_date: this.join_date,
+            })
 }
+}
+
+}
+
 </script>
 
 <style scoped>

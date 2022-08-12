@@ -1,13 +1,13 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
+import router from '@/router';
 // mangastoreurl
 const mangastoreurl = "https://mangastore-end-of-module.herokuapp.com/";
 
 export default createStore({
   state: {
     users: null,
-    products: null,
-    product : null
+    products: null
   },
   getters: {
     getUsers: state => state.users,
@@ -16,10 +16,6 @@ export default createStore({
   mutations: {
     setUsers(state, values) {
       state.users = values
-    },
-
-    setproduct(state, product) {
-      state.product = product
     },
 
     setproducts: (state, products) => {
@@ -45,7 +41,7 @@ fetchUsers: async (content) => {
         fullname, 
         email, 
         password,
-        userole,
+        userRole,
         userole, 
         phone_number,
         join_date
@@ -60,6 +56,7 @@ fetchUsers: async (content) => {
       }
     },
 
+// _______________
 // get products
     getproducts: async (context) => {
       let res = await fetch('https://mangastore-end-of-module.herokuapp.com/view-products');
@@ -70,25 +67,6 @@ fetchUsers: async (content) => {
       }else{
         console.log('loading...')
       }
-    },
-
-    getproduct: async (context, Product_id) => {
-      // Product_id = 1
-      fetch('https://mangastore-end-of-module.herokuapp.com/view-products/' + Product_id)
-      .then((res) => res.json())
-      .then((data) =>{
-      console.log(data)
-        context.commit("setproduct", data.results);
-      })
-      // let res = await fetch('https://mangastore-end-of-module.herokuapp.com/view-products/' + Product_id);
-      // let data = await res.json();
-      // let result = data.results;
-      // console.log(result)
-      // if(result){
-      //   context.commit('setproduct', result)
-      // }else{
-      //   console.log('loading...')
-      // }
     },
 
   },
