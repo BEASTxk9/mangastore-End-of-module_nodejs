@@ -23,8 +23,8 @@ export default createStore({
       state.product = product
     },
 
-    setproducts: (state, products) => {
-      state.products = products
+    setproducts: (state, vaule) => {
+      state.products = vaule
     },
   },
   actions: {

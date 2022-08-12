@@ -44,10 +44,10 @@
     <input type="text" v-model="description" placeholder="Enter description" required><br>
 
 <label for="img">Image:</label><br>
-    <input type="url" v-model="img" placeholder="Add image url" required><br>
+    <input type="text" v-model="img" placeholder="Add image url" required><br>
 
      <label for="img2">image 2:</label><br>
-    <input type="url" v-model="img2" placeholder="img2" required><br>
+    <input type="text" v-model="img2" placeholder="img2" required><br>
 
 <label for="price">Price:</label><br>
     <input type="number" v-model="price" placeholder="Enter price" required><br>
@@ -171,8 +171,8 @@ this.$store.dispatch('addProduct', {
     padding-bottom: 3px;
 }
 
-button{
+/* button{
   font-family: 'Titan One', cursive;
   font-weight: 500;
-}
+} */
 </style>
