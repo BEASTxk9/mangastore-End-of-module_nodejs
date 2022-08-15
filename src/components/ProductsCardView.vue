@@ -75,7 +75,7 @@ h1 {
     border-radius: 10px;
     transform-origin: left center 0px;
     display: inline-block;
-    margin: 32px;
+    margin: 52px;
     perspective: 800px;
 }
 

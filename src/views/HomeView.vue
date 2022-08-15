@@ -1,9 +1,11 @@
 <template>
 <section id="login_register">
-  <div class="container">
+  
 
   
   <h1>home</h1>
+<div class="container">
+
   <div class="row justify-content-center">
 
 <!-- register -->
@@ -37,8 +39,12 @@ export default {
 </script>
 
 <style scoped>
+body{
+  overflow-x: none;
+}
+
 #login_register{
-padding-bottom: 17vh;
+padding-bottom: 12vh;
 }
 
 #card{
@@ -50,8 +56,8 @@ padding-bottom: 17vh;
   border: 0.5px solid grey;
   border-radius: 10px;
   gap: 10px;
-  padding-top: 10px;
   padding-bottom: 10px;
+  padding-top: 5px;
 }
 
 

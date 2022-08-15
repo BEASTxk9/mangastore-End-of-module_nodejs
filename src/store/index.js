@@ -129,14 +129,13 @@ getproduct: async (context, Product_id) => {
 
 // delete product
 deleteProduct: async (context, Product_id) => {
-  // Product_id = 1
-  let user = fetch.splice('https://mangastore-end-of-module.herokuapp.com/products/' + Product_id)
+  fetch("https://mangastore-end-of-module.herokuapp.com/products/" + Product_id, {
+    method: "DELETE",
+  }) 
   .then((res) => res.json())
-  .then((data) =>{
-  console.log(data)
-    context.commit("setproduct", data.results);
-  })
-},
+  .then(() => context.dispatch('getproducts'), alert('Delete was successfull! Refresh the page.'));
+}
+
   },
   modules: {
   }

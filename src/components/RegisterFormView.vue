@@ -2,7 +2,7 @@
   <section id="register">
 
 
-<div class="container">
+<div>
     <div class="row justify-content-center">
         <div class="col-sm-8">
 <h2>REGISTER</h2>
