@@ -1,50 +1,62 @@
 <template>
-<div v-if="product">
-<div class="container">
-    <h2>{{ product[0].title }} {{ product[0].bookName }}</h2>
-   <div class="row mx-auto">
-    <div class="col-md-6">
-        <div class="wrapper">
-               
-            <div class="book">
-                <div class="book__cover">
-                    <img id="img1" :src="product[0].img">
-                    <div class="book__detail">{{ product[0].title }} {{ product[0].bookName }}</div>
+    <div v-if="product">
+        <div class="container">
+            <h1>{{ product[0].title }} {{ product[0].bookName }}</h1>
+            <div class="row mx-auto">
+                <div class="col-md-6">
+                    <div class="wrapper pt-5">
+
+                        <div class="book">
+                            <div class="book__cover">
+                                <img id="img1" :src="product[0].img">
+                                <div class="book__detail">{{ product[0].title }} {{ product[0].bookName }}</div>
+                            </div>
+                            <div class="book__page"><img :src="product[0].img2"></div>
+                        </div>
+                        <div class="shadow"></div>
+
+                    </div>
                 </div>
-                <div class="book__page"><img :src="product[0].img2"></div>
+                <div class="col-md-6 mx-auto d-flex justify-content-center flex-column p-5">
+                    <div class="card border-light" style="max-width:475px;">
+                        <div class="card-header text-start p-2">
+                            <h5>{{ product[0].description }}</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">{{ product[0].category }}</p>
+                            <p class="card-text">
+                           {{ product[0].datereleased }}
+                           </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="shadow"></div>
-                  
+
         </div>
     </div>
-    <div class="col-md-6 mx-auto">
-        <p>{{ product[0].description }}</p>
-        <p>{{ product[0].category}}</p>
-        <p>{{ product[0].datereleased}}</p>
-    </div>
-   </div>
-
-</div>
-</div>
 </template>
 
 <script>
 export default {
-  props: ["Product_id"],
+    props: ["Product_id"],
 
-mounted() {
-    this.$store.dispatch("getproduct", this.Product_id)
-  },
-  computed: {
-    product() {
-      return this.$store.state.product
+    mounted() {
+        this.$store.dispatch("getproduct", this.Product_id)
+    },
+    computed: {
+        product() {
+            return this.$store.state.product
+        }
     }
-  }
 
 }
 </script>
 
 <style scoped>
+.card{
+    background-color: transparent;
+}
+
 #img1 {
     border-radius: 10px;
     width: 275px;
@@ -64,10 +76,14 @@ h1 {
     font-size: 30px;
 }
 
+p {
+    font-family: 'Rye', cursive;
+}
+
 .wrapper {
     /* max-width: calc(100% / 4); */
     min-width: 10em;
-    
+
 }
 
 .book {
@@ -106,7 +122,8 @@ h1 {
     /*    animation: 3s infinite alternate floating; */
 
 }
-.back{
+
+.back {
     background-color: black;
 }
 
@@ -162,9 +179,10 @@ h1 {
         transform: translatey(0px);
     }
 }
-.container{
-    border-left: solid rgb(104,35,162);
-  border-right: solid rgb(104,35,162);
+
+.container {
+    border-left: solid rgb(104, 35, 162);
+    border-right: solid rgb(104, 35, 162);
 }
 
 /* @keyframes shadow {
