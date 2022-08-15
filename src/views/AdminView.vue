@@ -12,7 +12,9 @@
         </div>
 <!-- __________ -->
         <div id="table" class="col-sm-2">
+
 <addproduct></addproduct>
+
         </div>
 <!-- _________ -->
 <div id="table" class="col-sm-9">
@@ -89,7 +91,7 @@
 
 <script>
 import addproduct from '../components/AddProductView.vue'
- import Navbar from '../components/NavView.vue'
+import Navbar from '../components/NavView.vue'
 export default {
 components:{
 addproduct

@@ -1,7 +1,7 @@
 <template>
 <section id="login_register">
 
-<h1>home</h1>
+<h1 class="mt-3">home</h1>
 
 <div class="container">
   <div class="row justify-content-center">
@@ -50,8 +50,7 @@ padding-bottom: 17vh;
   border: 0.5px solid grey;
   border-radius: 10px;
   gap: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 
