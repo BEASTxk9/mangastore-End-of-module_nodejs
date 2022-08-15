@@ -151,7 +151,13 @@ getproduct: async (context, Product_id) => {
 //     .then((json) => context.commit("setUser", json), alert(`Product was Deleted.`));
 // },
 
-
+deleteProduct: async (context, Product_id) => {
+  fetch("https://mangastore-end-of-module.herokuapp.com/products/" + Product_id, {
+    method: "DELETE",
+  }) 
+  .then((res) => res.json())
+  .then(() => context.dispatch('getproducts'), alert('Delete was successfull! Refresh the page.'));
+}
 
   },
   modules: {

@@ -128,7 +128,7 @@ this.$store.dispatch('addProduct', {
 	-moz-transition: 0.3s;
 	-ms-transition: 0.3s;
 	-o-transition: 0.3s; 
-	z-index: 10;
+	z-index: -1;
 }
 
 .b:hover:before{
