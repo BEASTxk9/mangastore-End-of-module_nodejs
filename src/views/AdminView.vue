@@ -1,4 +1,5 @@
 <template>
+<Navbar></Navbar>
     <section id="admin">
 
 <div id="con" class="container" v-if="products">
@@ -7,7 +8,7 @@
 <div class="row justify-content-center pt-3">
   <!-- ___________ -->
         <div id="table" class="col-sm-1 mb-1">
-            <p id="logo-text">ADMIN</p>
+            <h1 class="fs-5 pt-4">ADMIN</h1>
         </div>
 <!-- __________ -->
         <div id="table" class="col-sm-2">
@@ -88,7 +89,7 @@
 
 <script>
 import addproduct from '../components/AddProductView.vue'
-
+ import Navbar from '../components/NavView.vue'
 export default {
 components:{
 addproduct
@@ -122,6 +123,12 @@ this.$store.dispatch('deleteProduct', {
                 join_date: this.join_date,
             })
 }
+},
+   
+
+  components: {
+  
+  Navbar
 }
 
 }

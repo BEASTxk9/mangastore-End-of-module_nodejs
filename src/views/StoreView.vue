@@ -1,14 +1,18 @@
 <template>
-  <h1>Manga Catalogue</h1>
-  <card></card>
+  <Navbar></Navbar>
+  <div class="container">
+    <h1>Manga Catalogue</h1>
+    <card></card>
+  </div>
 </template>
 
 <script>
 import card from '../components/ProductsCardView.vue';
-
+import Navbar from '../components/NavView.vue'
 export default {
 components: {
-  card
+  card,
+  Navbar
 }
 }
 </script>

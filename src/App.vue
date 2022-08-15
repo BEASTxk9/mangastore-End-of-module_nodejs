@@ -9,7 +9,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <h5>Contact Us</h5>
+        <h1 class="fs-5">Contact Us</h1>
         <ul class="list-inline social-icons">
             <li class="list-inline-item"><a href="https://www.facebook.com/jfpaintsza" target="_blank"><i class="fab fa-facebook-f fa-fw" aria-hidden="true"></i></a></li>
             <li class="list-inline-item"><a href="https://www.linkedin.com/company/dulux-jf-paints/" target="_blank"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a></li>
@@ -22,7 +22,7 @@
         <img src="" class="cards">
       </div>
       <div class="col-md-3">
-        <h5>Information</h5>
+        <h1 class="fs-5">Information</h1>
         <ul class="list-unstyled navigation">
             <li>
               <a href="/">Home</a>
@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import Nav from './components/NavView.vue';
+import Nav from './components/FakeNavView.vue';
 
 export default{
   components: {
@@ -84,6 +84,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.container{
+  margin-top: 100px;
 }
 
 /* footer{

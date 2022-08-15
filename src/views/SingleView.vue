@@ -1,4 +1,5 @@
 <template>
+<Navbar></Navbar>
     <div v-if="product">
         <div class="container">
             <h1>{{ product[0].title }} {{ product[0].bookName }}</h1>
@@ -6,26 +7,29 @@
                 <div class="col-md-6">
                     <div class="wrapper pt-5">
 
-                        <div class="book">
+                        <div class="book pt-2">
                             <div class="book__cover">
                                 <img id="img1" :src="product[0].img">
                                 <div class="book__detail">{{ product[0].title }} {{ product[0].bookName }}</div>
                             </div>
                             <div class="book__page"><img :src="product[0].img2"></div>
                         </div>
-                        <div class="shadow"></div>
+                         
+                      
 
                     </div>
                 </div>
                 <div class="col-md-6 mx-auto d-flex justify-content-center flex-column p-5">
                     <div class="card border-light" style="max-width:475px;">
-                        <div class="card-header text-start p-2">
-                            <h5>{{ product[0].description }}</h5>
+                        <div class="card-header text-start p-3 pt-3">
+                             <h1 class="fs-5">Description</h1><hr>
+                            <h5  class="des" >{{ product[0].description }}</h5> <hr>
+                            <p class="card-title">{{ product[0].category }}</p>
                         </div>
                         <div class="card-body">
-                            <p class="card-title">{{ product[0].category }}</p>
-                            <p class="card-text">
-                           {{ product[0].datereleased }}
+                           
+                           <p class="card-text fs-3">
+                           R{{ product[0].price }}
                            </p>
                         </div>
                     </div>
@@ -37,6 +41,7 @@
 </template>
 
 <script>
+import Navbar from '../components/NavView.vue'
 export default {
     props: ["Product_id"],
 
@@ -47,7 +52,10 @@ export default {
         product() {
             return this.$store.state.product
         }
-    }
+    },
+    components: {
+  Navbar
+}
 
 }
 </script>
@@ -55,6 +63,13 @@ export default {
 <style scoped>
 .card{
     background-color: transparent;
+}
+.card-text{
+    /* color:rgb(104, 35, 162); */
+     text-decoration: underline solid rgb(203,95,159);
+}
+.des{
+    font-size: 16px;
 }
 
 #img1 {
@@ -74,6 +89,7 @@ h1 {
     width: 100%;
     margin: 0 auto 0.5em;
     font-size: 30px;
+    text-decoration: underline solid rgb(203,95,159);
 }
 
 p {
@@ -103,7 +119,7 @@ p {
 }
 
 .book:hover .book__cover {
-    transform: rotateY(60deg);
+    transform: rotateY(55deg);
     z-index: 999;
     box-shadow: 20px 10px 50px rgba(0, 0, 0, 0.2);
 }
