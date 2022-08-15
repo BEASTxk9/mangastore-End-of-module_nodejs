@@ -36,6 +36,10 @@ export default {
 </script>
 
 <style scoped>
+body{
+  overflow-x: none;
+}
+
 #login_register{
 padding-bottom: 12vh;
 }
