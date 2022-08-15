@@ -75,7 +75,7 @@ login: async(context, payload) => {
 // _______________
 // get products
 getproducts: async (context) => {
-  let res = await fetch('https://mangastore-end-of-module.herokuapp.com/view-products');
+  let res = await fetch('https://mangastore-end-of-module.herokuapp.com/products');
   let data = await res.json();
   let result = data.results;
   if(result){
@@ -83,6 +83,17 @@ getproducts: async (context) => {
   }else{
     console.log('loading...')
   }
+},
+
+// get single product  
+getproduct: async (context, Product_id) => {
+  // Product_id = 1
+  fetch('https://mangastore-end-of-module.herokuapp.com/products/' + Product_id)
+  .then((res) => res.json())
+  .then((data) =>{
+  console.log(data)
+    context.commit("setproduct", data.results);
+  })
 },
 
  // add product
@@ -116,48 +127,16 @@ getproducts: async (context) => {
 }
 },
 
-    // delete product
-    deleteProduct: async(context, payload) => {
-      const {title, bookName, category, description,img,price,datereleased,created_by, img2 } = payload;
-      
-      try{
-        await fetch(mangastoreurl+"products/:id", {
-        method: "DELETE",
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-        body: JSON.stringify({
-          title : title,
-           bookName : bookName,
-           category : category,
-           description : description,
-          img : img,
-          price : price,
-          datereleased : datereleased,
-          created_by : created_by,
-           img2 : img2
-        }),
-      })
-        .then((response) => response.json)
-        .then((json) => context.commit("setproducts", json.data));
-        // router.push({name: "admin"});
-        
-      }catch(e) {
-      console.log(e);
-    }
-    },
-
-// get single product
-    getproduct: async (context, Product_id) => {
-      // Product_id = 1
-      fetch('https://mangastore-end-of-module.herokuapp.com/view-products/' + Product_id)
-      .then((res) => res.json())
-      .then((data) =>{
-      console.log(data)
-        context.commit("setproduct", data.results);
-      })
-    },
-
+// delete product
+deleteProduct: async (context, Product_id) => {
+  // Product_id = 1
+  let user = fetch.splice('https://mangastore-end-of-module.herokuapp.com/products/' + Product_id)
+  .then((res) => res.json())
+  .then((data) =>{
+  console.log(data)
+    context.commit("setproduct", data.results);
+  })
+},
   },
   modules: {
   }
