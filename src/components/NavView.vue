@@ -2,12 +2,12 @@
     <nav class="navbar navbar-light  fixed-top">
   <div class="container-fluid">
     <!-- <a class="navbar-brand" href="#">Offcanvas dark navbar</a> -->
-    <router-link class="b btn-layout" to="/">Home</router-link> 
-    <router-link class="b btn-layout" to="/landing">Landing</router-link> 
+    <router-link class="b btn-layout" to="/landing">Home</router-link> 
     <router-link class="b btn-layout" to="/about">About</router-link> 
     <router-link class="b btn-layout" to="/store">Shop</router-link> 
     <router-link class="b btn-layout" to="/admin">Admin</router-link> 
     <router-link class="b btn-layout" to="/contact">Contact</router-link>
+       <router-link class="b btn-layout" to="/">Logout</router-link> 
 
 	<!-- cart stuff -->
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
