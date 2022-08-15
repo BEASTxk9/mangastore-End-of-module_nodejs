@@ -16,11 +16,11 @@
 	
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+        <h1 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Your Cart</h1>
         <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <!-- <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -40,7 +40,7 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-        </ul>
+        </ul> -->
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-success" type="submit">Search</button>
@@ -61,7 +61,8 @@ export default {
 <style scoped>
 nav {
   padding: 30px;
- 
+ background-color: white;
+ border-bottom: 2px solid rgb(203,95,159) ;
 }
 
 nav a {
@@ -87,7 +88,7 @@ nav a.router-link-exact-active {
 	width: 0; 
 	height: 100%; 
 	position: absolute; 
-	/* background-color: rgb(0, 0, 0); */
+	background-color: white;
   border-bottom: 3px solid black;
 	/* color: rgb(255, 255, 255); */
 	left: 0; 

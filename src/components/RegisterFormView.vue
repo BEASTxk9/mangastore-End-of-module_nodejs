@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-8">
-<h1>REGISTER</h1>
+<h2>REGISTER</h2>
 
             <form @submit.prevent="register" method="POST">
 

@@ -1,9 +1,9 @@
 <template>
 <section id="login_register">
+  <div class="container">
 
-<h1>home</h1>
-
-<div class="container">
+  
+  <h1>home</h1>
   <div class="row justify-content-center">
 
 <!-- register -->

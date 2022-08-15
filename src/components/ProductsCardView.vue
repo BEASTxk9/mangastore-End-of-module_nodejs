@@ -58,7 +58,7 @@ export default {
 
 h1 {
     width: 100%;
-    margin: 0 auto 0.5em;
+    /* margin: 0 auto 0.5em; */
     font-size: 30px;
 }
 
