@@ -92,7 +92,8 @@ import addproduct from '../components/AddProductView.vue'
  import Navbar from '../components/NavView.vue'
 export default {
 components:{
-addproduct
+addproduct,
+Navbar
 },
 mounted() {
         this.$store.dispatch("getproducts")
@@ -126,10 +127,7 @@ this.$store.dispatch('deleteProduct', {
 },
    
 
-  components: {
-  
-  Navbar
-}
+
 
 }
 </script>
