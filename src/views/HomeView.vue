@@ -1,27 +1,25 @@
 <template>
-<section id="login_register">
-  
+  <div id="login_register">
+    <h1>Your Account</h1>
+    <div class="container">
 
-  
-  <h1>home</h1>
-<div class="container">
+      <div class="row justify-content-center">
 
-  <div class="row justify-content-center">
+        <!-- register -->
+        <div id="card" class="col-sm-12 col-md-5 mx-1">
+          <registerform></registerform>
+        </div>
 
-<!-- register -->
-    <div id="card" class="col-sm-12 col-md-5 mx-1">
-      <registerform></registerform>
-    </div>
+        <!-- login -->
+        <div id="card" class="col-sm-12 col-md-5 mx-1">
+          <loginform></loginform>
+        </div>
 
-<!-- login -->
-    <div id="card" class="col-sm-12 col-md-5 mx-1">
-      <loginform></loginform>
+      </div>
     </div>
 
   </div>
-</div>
 
-</section>
 </template>
 
 <script>
@@ -30,8 +28,8 @@ import loginform from '../components/LoginFormView.vue';
 
 export default {
   components: {
-  registerform,
-  loginform
+    registerform,
+    loginform
   }
 }
 
@@ -39,15 +37,15 @@ export default {
 </script>
 
 <style scoped>
-body{
+body {
   overflow-x: none;
 }
 
-#login_register{
-padding-bottom: 12vh;
+#login_register {
+  padding-bottom: 12vh;
 }
 
-#card{
+#card {
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -59,6 +57,4 @@ padding-bottom: 12vh;
   padding-bottom: 10px;
   padding-top: 5px;
 }
-
-
 </style>

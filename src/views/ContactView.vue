@@ -1,8 +1,10 @@
 <template>
 <Navbar></Navbar>
 <div class="container">
-
-  <h1>Contact</h1>
+  <h1>We would love to hear from you</h1>
+  <div>
+    
+  </div>
 </div>
 </template>
 
