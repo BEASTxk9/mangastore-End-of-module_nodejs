@@ -128,29 +128,6 @@ getproduct: async (context, Product_id) => {
 },
 
 // delete product
-// deleteProduct: async(context, Product_id) => {
-//   const { title, bookName, category, description,img,price,datereleased,created_by, img2 } = Product_id;
-//   await fetch(mangastoreurl+ Product_id, {
-//     method: "DELETE",
-//     headers: {
-//       "Content-type": "application/json; charset=UTF-8",
-//     },
-//     body: JSON.stringify({
-//       title : title,
-//        bookName : bookName,
-//        category : category,
-//        description : description,
-//       img : img,
-//       price : price,
-//       datereleased : datereleased,
-//       created_by : created_by,
-//        img2 : img2
-//     }),
-//   })
-//     .then((response) => response.json())
-//     .then((json) => context.commit("setUser", json), alert(`Product was Deleted.`));
-// },
-
 deleteProduct: async (context, Product_id) => {
   fetch("https://mangastore-end-of-module.herokuapp.com/products/" + Product_id, {
     method: "DELETE",
