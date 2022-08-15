@@ -16,5 +16,6 @@ Content-Type: application/json
     "img": "kjskj",
      "price": 78,
      "datereleased": "2022/08/10",
-     "created_by": "Shane"
+     "created_by": "Shane",
+     "img2": "hello"
 }

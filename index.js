@@ -61,7 +61,7 @@ router.get('/login', (req, res) => {
 });
 
 // products
-router.get('/products', (req, res) => {
+router.get('/products1', (req, res) => {
     res.status(200).sendFile('./views/products.html', {root:__dirname} );
 });
 
@@ -69,7 +69,7 @@ router.get('/products', (req, res) => {
 // mysql (post get delete) data
 
 // get all products
-router.get('/view-products', (req, res) => {
+router.get('/products', (req, res) => {
     // mysql query
     const strQry = `
     SELECT Product_id, title, bookName, category, description, img, price, datereleased, created_by, img2 from products;
@@ -88,7 +88,7 @@ router.get('/view-products', (req, res) => {
 });
 
 // get 1 product
-router.get('/view-products/:id', (req, res) => {
+router.get('/products/:id', (req, res) => {
      // mysql query
      const strQry = `
      SELECT Product_id, title, bookName, category, description, img, price, datereleased, created_by, img2  from products where Product_id = ?;
@@ -158,9 +158,12 @@ app.delete('/products/:id', (req, res)=> {
     DELETE FROM products 
     WHERE Product_id = ?;
     `;
-    db.query(strQry,[req.params.Product_id], (err, data, fields)=> {
-        if(err) throw err;
-        res.send(`${data.affectedRows} row was affected`);
+    db.query(strQry,[req.params.Product_id], (err, data)=> {
+        if(err){
+            throw err
+        } else {
+            res.send(`${data.affectedRows} row was affected`);
+        };
     })
 });
 
@@ -228,7 +231,7 @@ app.post('/login', bodyParser.json(),
                     //             status: 200,
                     //             results: key,
                     //         });
-                    res.redirect('/products')
+                    res.redirect('/products1')
                 // res.send("Welcome "+results[0].firstname)
                 break
                 default: 
