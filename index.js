@@ -27,6 +27,11 @@ app.use((req, res, next)=>{
     next();
 });
 
+app.use(cors({
+    origin: ['http://127.0.0.1:8080', 'http://localhost:8080'],
+    credentials: true
+ }));
+
 // __________________
 // add cors to the app variable
 app.use(router, cors(), express.json(), 
