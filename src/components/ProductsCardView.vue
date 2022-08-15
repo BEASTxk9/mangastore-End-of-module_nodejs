@@ -42,6 +42,7 @@ export default {
 </script>
 
 <style scoped>
+
 #img1 {
     border-radius: 10px;
     width: 175px;
