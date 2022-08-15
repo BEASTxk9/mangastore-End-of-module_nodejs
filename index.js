@@ -229,22 +229,21 @@ app.post('/login', bodyParser.json(),
         `;
         db.query(strQry, async (err, results)=> {
             if(err) throw err;
-            const key = jwt.sign(JSON.stringify(results[0]), process.env.secret);
-            res.json({
-                status: 200,
-                results: key,
-            });
+            // const key = jwt.sign(JSON.stringify(results[0]), process.env.secret);
+            // res.json({
+            //     status: 200,
+            //     results: key,
+            // });
+            // localStorage.setItem('key', JSON.stringify(key));
+            // key = localStorage.getItem('key');
 
-            localStorage.setItem('key', JSON.stringify(key));
-            key = localStorage.getItem('key');
-            
             switch(true){
                 case (await compare(password,results[0].password)):
                 res.redirect('/products1')
                 break
                 default: 
                 console.log("Bye");
-            }
+            } 
             // res.json({
             //     status: 200,
             //     results: (await compare(userpassword,
@@ -257,14 +256,12 @@ app.post('/login', bodyParser.json(),
     }
 });
 
-
-
 // get all users
 router.get("/users", (req, res) => {
     const query = `SELECT * FROM users`;
     db.query(query, (err, results) => {
         if (err) throw err;
-        const key = jwt.sign(JSON.stringify(results[0]), process.env.secret);
+        // const key = jwt.sign(JSON.stringify(results[0]), process.env.secret);
         if (results.length < 1) {
             res.json({
                 status: 204,
@@ -273,13 +270,30 @@ router.get("/users", (req, res) => {
         } else {
             res.json({
                 status: 200,
-                results: results, key,
+                results: results,
             });
         }
     });
 
 });
 
+// get 1 product
+router.get('/users/:id', (req, res) => {
+    // mysql query
+    const strQry = `
+    SELECT * from users where id = ?;
+    `;
+
+     // error controll
+   db.query(strQry, [req.params.id], (err, results) => {
+       if(err) throw err;
+       res.json({
+           status: 200,
+           results: (results.length <= 0) ? 'Sorry no product was found.' : results
+       })
+   });
+
+});
 
 
 
