@@ -123,6 +123,7 @@ this.$store.dispatch('deleteProduct', {
             })
 }
 }
+
 }
 </script>
 
