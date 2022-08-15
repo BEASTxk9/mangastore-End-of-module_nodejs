@@ -157,20 +157,17 @@ console.log(err)
 });
 
 // Delete product
-app.delete('/products/:id', (req, res)=> {
-    // Query
-    const strQry = 
-    `
-    DELETE FROM products 
+app.delete("/products/:id", (req, res) => {
+    // QUERY
+    const strQry = `
+    DELETE FROM products
     WHERE Product_id = ?;
+    ALTER TABLE products AUTO_INCREMENT = 1;
     `;
-    db.query(strQry,[req.params.Product_id], (err, data)=> {
-        if(err){
-            throw err
-        } else {
-            res.send(`${data.affectedRows} row was affected`);
-        };
-    })
+    db.query(strQry, [req.params.id], (err, data) => {
+        if (err) throw err;
+        res.send(`${data.affectedRows} PRODUCT/S WAS DELETED`);
+    });
 });
 
 
