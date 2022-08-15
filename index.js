@@ -8,6 +8,7 @@ const db = require('./config/dbconn');
 const { compare, hash } = require('bcrypt');
 const { stringify } = require('querystring');
 const jwt = require('jsonwebtoken');
+const localStorage = require('localStorage');
 
 // variable add express
 const app = express();
@@ -27,10 +28,10 @@ app.use((req, res, next)=>{
     next();
 });
 
-app.use(cors({
-    origin: ['http://127.0.0.1:8080', 'http://localhost:8080'],
-    credentials: true
- }));
+// app.use(cors({
+//     origin: ['http://127.0.0.1:8080', 'http://localhost:8080'],
+//     credentials: true
+//  }));
 
 // __________________
 // add cors to the app variable
@@ -136,17 +137,22 @@ console.log(err)
 });
 
 // Update product
-app.put('/products', (req, res)=> {
+app.put('/products/:id', (req, res)=> {
     const bd = req.body;
     // Query
     const strQry = 
     `UPDATE products
      SET ?
-     WHERE id = ?`;
+     WHERE title = ?, bookName = ?, category = ?, description = ?, img = ?, price = ?, datereleased = ?, created_by = ?, img2 = ?`;
 
-    db.query(strQry,[bd.id], (err, data)=> {
-        if(err) throw err;
-        res.send(`number of affected record/s: ${data.affectedRows}`);
+     db.query(strQry, 
+        [bd.title, bd.bookName, bd.category, bd.description, bd.img, bd.price, bd.datereleased, bd.created_by, bd.img2],
+        (err, results)=> {
+            if(err){
+console.log(err)
+            } else{
+                res.send(`number of affected row/s: ${results.affectedRows}`);
+            }
     })
 });
 
@@ -223,16 +229,18 @@ app.post('/login', bodyParser.json(),
         `;
         db.query(strQry, async (err, results)=> {
             if(err) throw err;
+            const key = jwt.sign(JSON.stringify(results[0]), process.env.secret);
+            res.json({
+                status: 200,
+                results: key,
+            });
 
+            localStorage.setItem('key', JSON.stringify(key));
+            key = localStorage.getItem('key');
+            
             switch(true){
                 case (await compare(password,results[0].password)):
-                    // const key = jwt.sign(JSON.stringify(results[0]), process.env.secret);
-                    //         res.json({
-                    //             status: 200,
-                    //             results: key,
-                    //         });
-                    res.redirect('/products1')
-                // res.send("Welcome "+results[0].firstname)
+                res.redirect('/products1')
                 break
                 default: 
                 console.log("Bye");
@@ -248,6 +256,32 @@ app.post('/login', bodyParser.json(),
         console.log(`From login: ${e.message}`);
     }
 });
+
+
+
+// get all users
+router.get("/users", (req, res) => {
+    const query = `SELECT * FROM users`;
+    db.query(query, (err, results) => {
+        if (err) throw err;
+        const key = jwt.sign(JSON.stringify(results[0]), process.env.secret);
+        if (results.length < 1) {
+            res.json({
+                status: 204,
+                results: "There are no users",
+            });
+        } else {
+            res.json({
+                status: 200,
+                results: results, key,
+            });
+        }
+    });
+
+});
+
+
+
 
 // logout
 
