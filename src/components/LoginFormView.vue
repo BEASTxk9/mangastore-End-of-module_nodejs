@@ -103,4 +103,16 @@ background-color: rgb(203,95,159);
     transform: rotate(1turn);
   }
 }
+
+@media screen and (max-width: 767.3px) {
+
+ input{
+  width: 70%;
+ }
+
+  #card {
+ 
+  height: 67vh;
+}
+ }
 </style>

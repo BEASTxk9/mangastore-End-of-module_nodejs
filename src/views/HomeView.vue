@@ -44,7 +44,7 @@
         </div>
 
         <!-- login -->
-        <div class="col-sm-12 col-md-5 mx-1">
+        <div id="login" class="col-sm-12 col-md-5 mx-1">
           <div class="collapse" id="collapseExample">
             <div id="card" class="card card-body">
               <loginform></loginform>
@@ -169,7 +169,26 @@ width: 100%;
 }
  }
 
+ @media screen and (max-width: 767.3px) {
+  #login{
+  margin-top: 10px;
+}
+
+.collapse{
+position: relative;
+top: 6rem;
+}
+
+ input{
+  width: 70%;
+ }
+ }
+
+
+
  @media only screen and (max-width: 1250px) {
+
+
 
   iframe{
     width: 400%;
