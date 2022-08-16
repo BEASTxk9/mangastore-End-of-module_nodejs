@@ -11,7 +11,7 @@
       <div class="row justify-content-center">
         <div class="col-sm-6 border-sm-0 pe-5 text-center">
           <div class="card">
-           <h2 class="fw-bold"> BEST SELLING MANAG:</h2>
+       
             <img class=" img-fluid " id="img1" src="https://i.postimg.cc/B632dKgG/6786547-one-piece-4.jpg" alt="">
             <div class="shadow"></div>
           </div>
