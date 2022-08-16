@@ -41,6 +41,10 @@ export default {
 </script>
 
 <style scoped>
+#sec{
+  padding-top: 130px;
+}
+
 img{
   width: 410px;
   /* height: 450px; */

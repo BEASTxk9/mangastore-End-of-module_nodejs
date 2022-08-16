@@ -96,9 +96,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     width: 100%;
     background-color: transparent;
 }
-body{
-  padding-top: 130px;
-}
+
 /* ///// */
 .footer {
   margin-top: 50px;

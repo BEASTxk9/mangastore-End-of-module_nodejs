@@ -39,5 +39,8 @@ export default {
 </script>
 
 <style scoped>
+#sec{
+  padding-top: 130px;
+}
 
 </style>

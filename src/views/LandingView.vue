@@ -1,23 +1,10 @@
 <template>
   <Navbar></Navbar>
-
-<h1>Unlimited Void</h1>
-
-  <div id="sec">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://i.postimg.cc/xdwbgMZJ/monkey-d-luffy-manga-b-Gls-Z26-Um-Zqara-Wkp-JRob-Wllr-Wdma2-U.jpg" class="d-block " alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://i.postimg.cc/KzmmZYkp/1000783.jpg" class="d-block" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://i.postimg.cc/0211xQTY/4022340.png" class="d-block " alt="...">
-    </div>
-  </div>
+<div id="sec">
+  hello
+    
 </div>
-</div>
+
 
 </template>
     <!-- https://i.postimg.cc/xdwbgMZJ/monkey-d-luffy-manga-b-Gls-Z26-Um-Zqara-Wkp-JRob-Wllr-Wdma2-U.jpg 
@@ -38,7 +25,7 @@ export default {
 
 <style scoped>
 #sec{
-  margin-top: 115px;
+  padding-top: 130px;
 }
 
 #quote-carousel .carousel-indicators .active 
@@ -70,10 +57,7 @@ img{
   object-fit: cover;
 }
 
-body{
-  padding-top: 130px;
-  
-}
+
 
 
 
