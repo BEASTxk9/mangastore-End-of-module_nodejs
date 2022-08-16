@@ -93,4 +93,10 @@ body{
 .typewriter-text{
   font-size: 5rem;
 }
+
+@media screen and (max-width: 500px) {
+  .typewriter-text{
+  font-size: 3rem;
+}
+ }
 </style>
