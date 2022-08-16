@@ -14,21 +14,21 @@
      <!-- type writer -->
     <div class="container typewriter-container">
       <transition name="fade" appear>
-        <h1 class="typewriter-text">
+        <h1 class="typewriter-text mt-1">
           Welcome<br>
         </h1>
       </transition>
     </div>
 
      <button 
-            class="btn"
+            class="btn text-white"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseExample"
             aria-expanded="false"
             aria-controls="collapseExample"
           >
-            Click
+            OPEN
           </button>
     <div class="container">
 
@@ -44,7 +44,7 @@
         </div>
 
         <!-- login -->
-        <div class="col-sm-12 col-md-5 mx-1">
+        <div id="login" class="col-sm-12 col-md-5 mx-1">
           <div class="collapse" id="collapseExample">
             <div id="card" class="card card-body">
               <loginform></loginform>
@@ -109,6 +109,8 @@ box-shadow: 0 4px 30px rgba(205, 205, 205, 0.1);
   margin-bottom: 10px;
 }
 
+
+
 .typewriter-text{
   font-size: 5rem;
   color: rgb(238, 238, 238);
@@ -169,7 +171,26 @@ width: 100%;
 }
  }
 
+ @media screen and (max-width: 767.3px) {
+  #login{
+  margin-top: 10px;
+}
+
+.collapse{
+position: relative;
+top: 6rem;
+}
+
+ input{
+  width: 70%;
+ }
+ }
+
+
+
  @media only screen and (max-width: 1250px) {
+
+
 
   iframe{
     width: 400%;

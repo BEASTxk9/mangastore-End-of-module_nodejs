@@ -60,7 +60,7 @@
 
    
 
-    <button class="mt-4" @click="submit" data-bs-target="#exampleModal"  data-bs-dismiss="modal"
+    <button class="mt-4 b btn-layout" @click="submit" data-bs-target="#exampleModal"  data-bs-dismiss="modal"
               aria-label="Close">Add product</button>
 
 </form>
@@ -165,10 +165,19 @@ this.$store.dispatch('addProduct', {
  box-shadow: 0px 0px 50px 3px rgb(203,95,159);
 }
 
+input{
+  border-radius: 5px;
+  border: none;
+}
+
 #date{
     width: 72%;
     padding-top: 3px;
     padding-bottom: 3px;
+}
+
+#exampleModal{
+  height: 100%;
 }
 
 /* button{

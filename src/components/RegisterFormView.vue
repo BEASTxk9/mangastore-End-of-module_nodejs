@@ -80,6 +80,16 @@ select, #join_date{
     padding-bottom: 3px;
 }
 
+input{
+  border-radius: 5px;
+   border: none;
+}
+
+select{
+     border-radius: 5px;
+   border: none;
+}
+
 /* button */
 .button {
   position: relative;
@@ -132,4 +142,16 @@ select, #join_date{
     transform: rotate(1turn);
   }
 }
+
+@media screen and (max-width: 767.3px) {
+
+ input{
+  width: 70%;
+ }
+
+ #card {
+ 
+  height: 67vh;
+}
+ }
 </style>

@@ -132,6 +132,10 @@ export default {
 </script>
 
 <style scoped>
+*{
+  overflow-x: scroll;
+}
+
 #admin{
   padding-top: 10px;
   overflow-x: scroll;
@@ -269,30 +273,5 @@ button {
 
 #delete, #update{
   font-size: 1.5rem;
-}
-
-@media screen and (max-width: 796px) { 
-/* #admin{
-  width: 500px;
-} */
-}
-
-@media screen and (max-width: 576px) { 
-.container{
-	
-}
-}
-
-
-@media screen and (max-width: 496px) { 
-#logo{
-	display: none;
-}
-}
-
-@media screen and (max-width: 345px) { 
-nav{
-	font-size: 7px;
-}
 }
 </style>

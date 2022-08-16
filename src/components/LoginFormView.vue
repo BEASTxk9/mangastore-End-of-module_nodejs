@@ -94,6 +94,11 @@ background-color: rgb(203,95,159);
   animation: button-loading-spinner 1s ease infinite;
 }
 
+input{
+  border-radius: 5px;
+  border: none;
+}
+
 @keyframes button-loading-spinner {
   from {
     transform: rotate(0turn);
@@ -103,4 +108,16 @@ background-color: rgb(203,95,159);
     transform: rotate(1turn);
   }
 }
+
+@media screen and (max-width: 767.3px) {
+
+ input{
+  width: 70%;
+ }
+
+  #card {
+ 
+  height: 67vh;
+}
+ }
 </style>
