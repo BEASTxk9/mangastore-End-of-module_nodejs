@@ -58,7 +58,7 @@ export default {
 
 h1 {
     width: 100%;
-    margin: 0 auto 0.5em;
+    /* margin: 0 auto 0.5em; */
     font-size: 30px;
 }
 
@@ -75,7 +75,7 @@ h1 {
     border-radius: 10px;
     transform-origin: left center 0px;
     display: inline-block;
-    margin: 32px;
+    margin: 52px;
     perspective: 800px;
 }
 

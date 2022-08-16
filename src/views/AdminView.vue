@@ -13,11 +13,8 @@
           <addproduct></addproduct>
         </div>
         <!-- _________ -->
-        <div id="table" class="col-sm-9">
-          <h6 id="logo-text" class="py-1 text-end">
-            <i id="logo" class="fa-solid fa-book-open"></i> | Unlimited Void
-          </h6>
-          <p id="sub-text" class="text-end">manga at your fingertips</p>
+        <div id="table" class="col-sm-9 d-flex justify-content-end">
+          <img src="https://i.postimg.cc/zDx3C6R9/logo.jpg" class="img-fluid  " style="height:50px;">
         </div>
       </div>
 

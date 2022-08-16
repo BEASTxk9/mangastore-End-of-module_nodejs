@@ -73,6 +73,7 @@ export default{
 
 h1{
   font-family:  'Rye', cursive;
+  text-decoration: underline solid rgb(203,95,159);
 }
 body{
 background-color: #ffffff;
@@ -85,8 +86,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   text-align: center;
   color: #2c3e50;
 }
-.container{
-  margin-top: 100px;
+body{
+  padding-top: 130px;
 }
 /* scroll */
 /* width */
@@ -97,8 +98,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 /* ///// */
 .footer {
+  margin-top: 50px;
     padding: 50px;
-    border-top: 1px solid #efefef;
+   
+     border-top: solid rgb(203,95,159) ;
 
 }
 li{
@@ -109,4 +112,5 @@ li{
   display: flex;
   flex-direction: column;
 }
+
 </style>

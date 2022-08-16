@@ -37,6 +37,7 @@
             </div>
 
         </div>
+        <br>
     </div>
 </template>
 
@@ -197,8 +198,8 @@ p {
 }
 
 .container {
-    border-left: solid rgb(104, 35, 162);
-    border-right: solid rgb(104, 35, 162);
+    border-left: solid rgb(203,95,159);
+    border-right: solid rgb(203,95,159);
 }
 
 /* @keyframes shadow {
