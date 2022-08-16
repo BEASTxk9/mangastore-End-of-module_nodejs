@@ -65,10 +65,9 @@ login: async(context, payload) => {
   })
   if(result){
     router.push({name: "landing"})
-    alert('Loading...')
+    alert('Welcome')
   } else {
-    this.errMsg = `
-    error`
+    alert('Password or Email is wrong. Please try again.')
   }
 },
 

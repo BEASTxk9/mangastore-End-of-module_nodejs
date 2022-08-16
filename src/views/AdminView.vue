@@ -65,7 +65,7 @@
                 <td>
                  
                     <button id="delete" class="b btn-layout" v-on:click="$store.dispatch('deleteProduct', product.Product_id)">
-                      Delete Product
+                      <i class="fa-solid fa-trash"></i>
                     </button>
 
                 </td>
@@ -251,5 +251,9 @@ button {
   font-family: "Titan One", cursive;
   font-weight: 500;
   font-size: 12px;
+}
+
+#delete{
+  font-size: 1.5rem;
 }
 </style>
