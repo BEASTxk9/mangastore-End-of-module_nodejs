@@ -202,7 +202,7 @@ app.post('/register',bodyParser.json(),
             [bd.fullname, bd.email, bd.password, bd.userRole,bd.phone_number, bd.join_date],
             (err, results)=> {
                 if(err) {
-                    console.log(err)
+                    console.log(err);
                 } else{
                     console.log(results);
                 }
