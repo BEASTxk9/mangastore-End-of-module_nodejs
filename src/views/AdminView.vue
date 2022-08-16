@@ -132,6 +132,9 @@ export default {
 </script>
 
 <style scoped>
+*{
+  overflow-x: scroll;
+}
 
 #admin{
   padding-top: 10px;

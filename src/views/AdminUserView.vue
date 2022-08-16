@@ -119,6 +119,10 @@ export default {
 </script>
 
 <style scoped>
+*{
+  overflow-x: scroll;
+}
+
 #admin{
   margin-top: 10px;
 }

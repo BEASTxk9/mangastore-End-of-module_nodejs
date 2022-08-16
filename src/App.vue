@@ -71,9 +71,7 @@ export default{
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 
-*{
-  overflow-x: scroll;
-}
+
 
 h1{
   font-family:  'Rye', cursive;
