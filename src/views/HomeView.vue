@@ -1,6 +1,14 @@
 <template>
   <div id="login_register">
-    <h1>Unlimited Void</h1>
+     <!-- type writer -->
+    <div class="container typewriter-container">
+      <transition name="fade" appear>
+        <h1 class="typewriter-text">
+          Welcome<br>
+        </h1>
+      </transition>
+    </div>
+
      <button 
             class="btn"
             type="button"
@@ -60,12 +68,11 @@ body{
 }
 
 #login_register {
-  padding-bottom: 17.7vh;
-  padding-top: 1rem;
+  padding-bottom: 17.5vh;
+  padding-top: 1.5rem;
 }
 
 #toggle{
-  margin-bottom: 58vh;
   transition: all 0.3s ease-in-out;
 }
 
@@ -81,5 +88,9 @@ body{
 .btn{
   background-color: rgb(203,95,159);
   margin-bottom: 10px;
+}
+
+.typewriter-text{
+  font-size: 5rem;
 }
 </style>

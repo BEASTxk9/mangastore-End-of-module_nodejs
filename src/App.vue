@@ -271,4 +271,39 @@ li{
   margin: 0 16px;
 }
 
+
+/* AOS-"LIKE" EFFECT */
+.slide-right-enter-from{
+    opacity: 0;
+    transform: translateX(-1500px);
+}
+.slide-right-enter-to{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.slide-right-enter-active{
+    transition: all 2s ease;
+}
+.slide-left-enter-from{
+    opacity: 0;
+    transform: translateX(1500px);
+}
+.slide-left-enter-to{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.slide-left-enter-active{
+    transition: all 2s ease;
+}
+.fade-enter-from{
+    opacity: 0;
+    transform: scale(0.1);
+}
+.fade-enter-to{
+    opacity: 1;
+    transform: scale(1);
+}
+.fade-enter-active{
+    transition: all 2s ease;
+}
 </style>
