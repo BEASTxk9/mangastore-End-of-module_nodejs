@@ -1,6 +1,6 @@
 <template>
   <Navbar></Navbar>
-  <div class="container">
+  <div v-if="true" id="sec" class="container">
     <div class="about">
           <h1>About Us</h1>
           <br>
@@ -41,9 +41,6 @@ export default {
 </script>
 
 <style scoped>
-body{
-  padding-top: 130px;
-}
 img{
   width: 410px;
   /* height: 450px; */

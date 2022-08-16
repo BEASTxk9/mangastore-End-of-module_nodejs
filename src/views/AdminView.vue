@@ -60,12 +60,22 @@
                 <td>{{ product.datereleased }}</td>
                 <td>{{ product.created_by }}</td>
                 <td>
-                 
-                    <button id="delete" class="b btn-layout" v-on:click="$store.dispatch('deleteProduct', product.Product_id)">
-                      Delete Product
-                    </button>
 
+                 <div class="row">
+                  <div class="col-sm-6">
+                    <button id="delete" class="b btn-layout" v-on:click="$store.dispatch('deleteProduct', product.Product_id)">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                    </div>
+
+                  <div class="col-sm-6">
+                    <button id="update" class="b btn-layout" v-on:click="$store.dispatch('updateProduct', product.Product_id)">
+                     <i class="fa-solid fa-pen-to-square"></i>
+                    </button></div>
+                 </div>
+                   
                 </td>
+
               </tr>
             </tbody>
           </table>
@@ -73,9 +83,25 @@
       </div>
     </div>
 
-    <div v-else>
-      <h2>Please wait or restart the page...</h2>
-    </div>
+<div v-else>
+    <div class="loader">
+    <svg viewBox="0 0 80 80">
+        <circle id="test" cx="40" cy="40" r="32"></circle>
+    </svg>
+</div>
+
+<div class="loader triangle">
+    <svg viewBox="0 0 86 80">
+        <polygon points="43 8 79 72 7 72"></polygon>
+    </svg>
+</div>
+
+<div class="loader">
+    <svg viewBox="0 0 80 80">
+        <rect x="8" y="8" width="64" height="64"></rect>
+    </svg>
+</div>
+</div>
   </section>
 </template>
 
@@ -95,41 +121,11 @@ export default {
       return this.$store.state.products;
     },
   },
-  // data() {
-  //   return {
-  //         title: "",
-  //       bookName: "",
-  //       category: "",
-  //       description: "",
-  //       img: "",
-  //       price: "",
-  //       datereleased: "",
-  //       created_by: "",
-  //       img2: "",
-  //   };
-  // },
-  // methods: {
-  //   deleteProduct() {
-  //     this.$store.dispatch("deleteProduct", {
-  //    title: this.title,
-  //     bookName: this.bookName,
-  //     category: this.category,
-  //     description: this.description,
-  //     img: this.img,
-  //     price: this.price,
-  //     datereleased: this.datereleased,
-  //     created_by: this.created_by,
-  //     img2: this.img2,
-  //     });
-  //   },
-  // },
+ 
 };
 </script>
 
 <style scoped>
-body{
-  padding-top: 130px;
-}
 #table {
   border-left: 0.3px solid rgba(128, 128, 128, 0.282);
   border-top: 0.3px solid rgba(128, 128, 128, 0.282);
@@ -251,5 +247,9 @@ button {
   font-family: "Titan One", cursive;
   font-weight: 500;
   font-size: 12px;
+}
+
+#delete, #update{
+  font-size: 1.5rem;
 }
 </style>
