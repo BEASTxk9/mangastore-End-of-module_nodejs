@@ -100,7 +100,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 /* ///// */
 .footer {
-  margin-top: 50px;
     padding: 50px;
    
      border-top: solid rgb(203,95,159) ;
