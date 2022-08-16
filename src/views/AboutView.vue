@@ -4,7 +4,7 @@
     <div class="about">
           <h1>About Us</h1>
           <br>
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-sm-6 order-sm-0">
           <img class="img-fluid" src="https://i.postimg.cc/L6yY0HV2/09yteykvyun21.gif" alt="">
         </div>
@@ -19,10 +19,12 @@
       </div>
     </div>
     <br>
-    <div class="abt mx-auto">
+    <div class="row justify-content-center">
+    <div class="abt ">
       <h1>Why Choose Us?</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum beatae tempore, quaerat impedit dolor earum id velit hic pariatur atque veniam inventore ex sit? Reiciendis aliquam sit quod voluptates accusantium.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolor maiores ducimus iure consectetur? Repudiandae nobis, illo molestias tempora atque corrupti, aperiam placeat at nam sapiente possimus sed tenetur. Eum!</p>
 
+    </div>
     </div>
   </div>
    
