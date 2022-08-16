@@ -137,26 +137,6 @@ console.log(err)
     }
 });
 
-// Update product
-// router.put('/products/:id', (req, res)=> {
-//     const bd = req.body;
-//     // Query
-//     const strQry = 
-//     `UPDATE products
-//      SET ?
-//      WHERE title = ?, bookName = ?, category = ?, description = ?, img = ?, price = ?, datereleased = ?, created_by = ?, img2 = ?`;
-
-//      db.query(strQry, 
-//         [bd.title, bd.bookName, bd.category, bd.description, bd.img, bd.price, bd.datereleased, bd.created_by, bd.img2],
-//         (err, results)=> {
-//             if(err){
-// console.log(err)
-//             } else{
-//                 res.send(`number of affected row/s: ${results.affectedRows}`);
-//             }
-//     })
-// });
-
 // Delete product
 app.delete("/products/:id", (req, res) => {
     // QUERY
@@ -307,6 +287,36 @@ router.get('/users/:id', (req, res) => {
    });
 
 });
+
+// Delete user
+app.delete("/users/:id", (req, res) => {
+    // QUERY
+    const strQry = `
+    DELETE FROM users
+    WHERE id = ?;
+    ALTER TABLE users AUTO_INCREMENT = 1;
+    `;
+    db.query(strQry, [req.params.id], (err, data) => {
+        if (err) throw err;
+        res.send(`${data.affectedRows} USER/S WAS DELETED`);
+    });
+});
+
+// Update user
+router.put("/users/:id", bodyParser.json(), async (req, res) => {
+    const { fullname, email, password, userRole, phone_number, join_date  } = req.body;
+    let sql = `UPDATE users SET ? WHERE id = ${req.params.id} `;
+    const user = {
+        fullname, email, password, userRole, phone_number, join_date
+    };
+    db.query(sql, user, (err) => {
+      if (err) throw err;
+      res.json({
+        msg: "Updated user Successfully",
+      });
+    });
+  });
+
 
 
 
