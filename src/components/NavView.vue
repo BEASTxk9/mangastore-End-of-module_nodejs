@@ -2,7 +2,7 @@
     <nav class="navbar navbar-light  fixed-top">
   <div class="container-fluid">
     <!-- <a class="navbar-brand" href="#">Offcanvas dark navbar</a> -->
-	<img src="https://i.postimg.cc/zDx3C6R9/logo.jpg" class="img-fluid">
+	<img id="logo" src="https://i.postimg.cc/zDx3C6R9/logo.jpg" class="img-fluid">
     <router-link class="b btn-layout" to="/landing">Home</router-link> 
     <router-link class="b btn-layout" to="/about">About</router-link> 
     <router-link class="b btn-layout" to="/store">Shop</router-link> 
@@ -121,6 +121,25 @@ nav a.router-link-exact-active {
 }
 img{
 	width: 150px;
+}
+
+@media screen and (max-width: 576px) { 
+nav{
+	font-size: 10px;
+}
+}
+
+
+@media screen and (max-width: 496px) { 
+#logo{
+	display: none;
+}
+}
+
+@media screen and (max-width: 345px) { 
+nav{
+	font-size: 7px;
+}
 }
 
 </style>

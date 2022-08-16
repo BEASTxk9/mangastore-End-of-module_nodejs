@@ -1,5 +1,5 @@
 <template>
-  <Navbar></Navbar>
+
   <section id="admin">
     <div id="con" class="container" v-if="products">
       <!-- nav -->
@@ -14,7 +14,7 @@
         </div>
         <!-- _________ -->
         <div id="table" class="col-sm-9 d-flex justify-content-end">
-          <img src="https://i.postimg.cc/zDx3C6R9/logo.jpg" class="img-fluid  " style="height:50px;">
+          <span class="mt-3 fw-bold">PRODUCTS</span> <img src="https://i.postimg.cc/zDx3C6R9/logo.jpg" class="img-fluid  " style="height:50px;">
         </div>
       </div>
 
@@ -23,12 +23,18 @@
         <!-- side nav -->
         <div id="sidenav" class="col-sm-1 text-start">
           <nav>
-            <a href="#">hello</a>
+               <router-link class="b btn-layout" to="/landing">Home</router-link> 
+    <router-link class="b btn-layout" to="/about">About</router-link> 
+    <router-link class="b btn-layout" to="/store">Shop</router-link> 
+    <router-link class="b btn-layout" to="/contact">Contact</router-link>
+       <router-link class="b btn-layout" to="/">Logout</router-link> 
+       <router-link class="b btn-layout" to="/admin"><i class="fa-solid fa-bag-shopping"></i></router-link> 
+	<router-link class="b btn-layout" to="/adminuser"><i class="fa-solid fa-user"></i></router-link>
           </nav>
         </div>
         <!-- table -->
         <div id="table1" class="col-sm-11">
-          <table class="table table-bordered">
+          <table class="table-fluid table-bordered">
             <thead>
               <th>ID</th>
               <th>Title</th>
@@ -39,7 +45,7 @@
               <th>price</th>
               <th>datereleased</th>
               <th>createdby</th>
-              <th>Actions</th>
+              <th class="px-2">Actions</th>
             </thead>
             <tbody>
               <tr v-for="(product, index) in products" :key="index">
@@ -62,13 +68,13 @@
                 <td>
 
                  <div class="row">
-                  <div class="col-sm-6">
+                  <div class="col-sm-5">
                     <button id="delete" class="b btn-layout" v-on:click="$store.dispatch('deleteProduct', product.Product_id)">
                       <i class="fa-solid fa-trash"></i>
                     </button>
                     </div>
 
-                  <div class="col-sm-6">
+                  <div class="col-sm-5">
                     <button id="update" class="b btn-layout" v-on:click="$store.dispatch('updateProduct', product.Product_id)">
                      <i class="fa-solid fa-pen-to-square"></i>
                     </button></div>
@@ -107,11 +113,11 @@
 
 <script>
 import addproduct from "../components/AddProductView.vue";
-import Navbar from "../components/NavView.vue";
+
 export default {
   components: {
     addproduct,
-    Navbar,
+ 
   },
   mounted() {
     this.$store.dispatch("getproducts");
@@ -127,7 +133,12 @@ export default {
 
 <style scoped>
 #admin{
-  padding-top: 130px;
+  padding-top: 10px;
+  overflow-x: scroll;
+}
+
+table{
+  overflow-x: scroll;
 }
 
 #table {
@@ -211,7 +222,6 @@ img {
 
 .b:hover:before {
   color: rgb(255, 255, 255);
-  box-shadow: 12px 31px 37px rgba(255, 255, 255, 0.5);
   width: 100%;
   left: auto;
   right: 0;
@@ -234,9 +244,12 @@ img {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   overflow: hidden;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .btn-layout:hover {
+  text-decoration: none;
   color: rgb(255, 255, 255);
   transition: all 0.5s ease-in-out;
   box-shadow: 0px 0px 50px 3px rgb(203,95,159);
