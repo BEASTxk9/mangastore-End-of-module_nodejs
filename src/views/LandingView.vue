@@ -9,7 +9,7 @@
           <br>
           <br>
       <div class="row justify-content-center">
-        <div class="col-sm-6 border-sm-0 pe-5 text-center">
+        <div class="col-sm-6 border-sm-0 text-center">
           <div class="card">
        
             <img class=" img-fluid " id="img1" src="https://i.postimg.cc/B632dKgG/6786547-one-piece-4.jpg" alt="">
@@ -101,6 +101,7 @@ color:black;
   background-image: url("https://i.postimg.cc/xdwbgMZJ/monkey-d-luffy-manga-b-Gls-Z26-Um-Zqara-Wkp-JRob-Wllr-Wdma2-U.jpg");
   height: 92vh;
   width: 100%;
+  object-fit: cover;
 
 }
 .text{
@@ -203,6 +204,22 @@ img{
   width: 300px;
   height: 530px;
 }
+}
+@media screen and (max-width: 321px) {
+  .card{
+  width: 300px;
+  height: 530px;
+
+}
+.back{
+  margin-bottom: 60vh;
+
+}
+#text{
+  margin-top: 25px;
+}
+
+}
 
 .text{
   color: rgb(203, 95, 160);
@@ -214,12 +231,12 @@ img{
     margin-bottom: 50vh;
 }
 
-.back{
+/* .back{
   background-image: url("https://i.postimg.cc/xdwbgMZJ/monkey-d-luffy-manga-b-Gls-Z26-Um-Zqara-Wkp-JRob-Wllr-Wdma2-U.jpg");
   height: 92vh;
   width: 100%;
      margin-bottom: 170vh;
-}
- }
+} */
+ 
 
 </style>

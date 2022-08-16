@@ -252,4 +252,89 @@ p {
 	 box-shadow: 8px 0px 2px  #222;
   
 /*    border-left: 1px solid black; */
+@media screen and (max-width: 321px) {
+ book {
+    height: 300px;
+    width: 200px;
+    position: relative;
+    transition: 0.4s ease-in-out;
+    border-radius: 10px;
+    transform-origin: left center 0px;
+    display: inline-block;
+    margin: 32px;
+    perspective: 800px;
+}
+
+.book:hover {
+    transform: rotateZ(8deg);
+}
+
+.book:hover .book__cover {
+    transform: rotateY(55deg);
+    z-index: 999;
+    box-shadow: 20px 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+.book__cover {
+    height: 300px;
+    width: 200px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1.5px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    transition: 0.5s linear;
+    transform-style: preserve-3d;
+    transform-origin: right center 0px;
+    background-size: 180px 255px;
+    /*    animation: 3s infinite alternate floating; */
+
+}
+
+.back {
+    background-color: black;
+    
+}
+
+.book__detail {
+    background-color: rgba(51, 51, 51, 0.8);
+    margin-top: 185px;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: 800;
+    position: relative;
+    top: -17rem;
+    z-index: 10;
+    color: #fff;
+    text-align: left;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.book__page {
+    height: 300px;
+    width: 200px;
+    position: absolute;
+    background-color: #fbfae8;
+    z-index: 0;
+    box-shadow: 0 0 5px 1.5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.book img {
+    background-size: fit-content;
+    width: 100%;
+    height: 300px;
+
+}
+#img1 {
+    border-radius: 10px;
+    width: 200px;
+}
+.container{
+    overflow-x:hidden;
+}
+.card{
+    margin-top:-100px;
+}
+}
 </style>
