@@ -1,20 +1,23 @@
 <template>
   <Navbar></Navbar>
 <div id="sec">
+
   <div class="back">
     <div class="container">
     <div class="landing">
       <br>
-          <h1 class="text mx-auto">Unlimited Void</h1>
+          <br>
           <br>
       <div class="row">
-        <div class="col-sm-6 order-sm-0">
+        <div class="col-sm-6 order-sm-0 pe-5">
           <div class="card">
-            <img class="img-fluid " id="img1" src="https://i.postimg.cc/B632dKgG/6786547-one-piece-4.jpg" alt="">
+            <img class=" img-fluid " id="img1" src="https://i.postimg.cc/B632dKgG/6786547-one-piece-4.jpg" alt="">
             <div class="shadow"></div>
           </div>
         </div>
         <div id="text" class="col-sm-6 order-sm-1 d-flex flex-column justify-content-center p-lg-5">
+          <h1 class="text mx-auto">Unlimited Void</h1>
+          <h2><u>Bringing Manga To You</u></h2>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro impedit sapiente, adipisci explicabo tempore
           optio a asperiores incidunt quasi vitae laudantium laboriosam libero in rerum distinctio facere debitis
           reiciendis
@@ -28,6 +31,7 @@
   </div>
 
   </div>
+
     
 </div>
 
@@ -51,7 +55,7 @@ export default {
 
 <style scoped>
 #sec{
-  padding-top: 78px;
+  padding-top: 69px;
 }
 /* img{
   height: 100vh;
@@ -65,22 +69,46 @@ export default {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  background-color: rgba(203, 95, 160, 0.83);
- 
+  /* background-color: rgba(203, 95, 160, 0.83); */
+  /* From https://css.glass */
+background: rgba(203, 95, 160,0.50);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.4px);
+-webkit-backdrop-filter: blur(2.4px);
+border: 1px solid rgba(203, 95, 160, 0.3);
+ margin-left: 80px;
+}
+h2{
+  font-size: 45px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  margin-bottom: 50px;
+  padding: 2px;
+
+}
+#text{
+    background: rgba(209, 208, 208, 0.5);
+border-radius: 10px;
+box-shadow: 0 4px 30px rgba(205, 205, 205, 0.1);
+backdrop-filter: blur(2.4px);
+-webkit-backdrop-filter: blur(2.4px);
+border: 1px solid rgba(203, 183, 195, 0.3);
+color:black;
 }
 
 .back{
   background-image: url("https://i.postimg.cc/xdwbgMZJ/monkey-d-luffy-manga-b-Gls-Z26-Um-Zqara-Wkp-JRob-Wllr-Wdma2-U.jpg");
-  height: 90vh;
+  height: 92vh;
   width: 100%;
 
 }
 .text{
   color: rgb(203, 95, 160);
    background-color: black;
-   width: 380px;
-   padding: 3px;
+   width: 420px;
+   padding: 5px;
    border-radius: 10px;
+   font-size:50px;
 }
 
 #img1 {

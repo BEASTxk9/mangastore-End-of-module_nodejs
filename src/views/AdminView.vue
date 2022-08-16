@@ -38,7 +38,7 @@
               <th>description</th>
               <th>price</th>
               <th>datereleased</th>
-              <th>created_by</th>
+              <th>createdby</th>
               <th>Actions</th>
             </thead>
             <tbody>
@@ -153,6 +153,7 @@ thead {
 }
 
 th {
+  font-size: 1rem;
   padding: 5px;
   border-top: none;
   border-left: 0.3px solid rgba(128, 128, 128, 0.282);
@@ -238,7 +239,7 @@ img {
 .btn-layout:hover {
   color: rgb(255, 255, 255);
   transition: all 0.5s ease-in-out;
-  box-shadow: 0px 0px 50px 3px rgba(0, 206, 255, 0.7);
+  box-shadow: 0px 0px 50px 3px rgb(203,95,159);
 }
 
 #date {

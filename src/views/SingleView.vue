@@ -29,7 +29,8 @@
                         <div class="card-body">
                            
                            <p class="card-text fs-3">
-                           R{{ product[0].price }}
+                               R{{ product[0].price }}
+                            <button  class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Add to Cart</button>
                            </p>
                         </div>
                     </div>
@@ -84,10 +85,9 @@ export default {
 
 <style scoped>
 
-body{
-  padding-top: 130px;
+button{
+    margin-left: 40px;
 }
-
 #sec{
   margin-top: 130px;
 }
@@ -130,7 +130,7 @@ p {
 .wrapper {
     /* max-width: calc(100% / 4); */
     min-width: 10em;
-
+    margin-bottom: 70px;
 }
 
 .book {

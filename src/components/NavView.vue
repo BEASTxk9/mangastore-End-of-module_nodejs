@@ -6,13 +6,13 @@
     <router-link class="b btn-layout" to="/landing">Home</router-link> 
     <router-link class="b btn-layout" to="/about">About</router-link> 
     <router-link class="b btn-layout" to="/store">Shop</router-link> 
-    <router-link class="b btn-layout" to="/admin">Admin</router-link> 
-	<router-link class="b btn-layout" to="/adminuser">Admin User</router-link>
     <router-link class="b btn-layout" to="/contact">Contact</router-link>
        <router-link class="b btn-layout" to="/">Logout</router-link> 
 
 	<!-- cart stuff -->
     <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-cart4" style="color: rgb(203,95,159); font-size:20px;"></i></button>
+	<router-link class="b btn-layout" to="/admin"><i class="fa-solid fa-bag-shopping"></i></router-link> 
+	<router-link class="b btn-layout" to="/adminuser"><i class="fa-solid fa-user"></i></router-link>
 
 <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
@@ -35,11 +35,13 @@ export default {
 </script>
 
 <style scoped>
+a{
+	font-family: 'Rye', cursive;
+}
 nav {
-  padding: 35px;
+  padding-top: 15px;
  background-color: white;
  border-bottom: solid rgb(203,95,159) ;
-  padding: 15px;
   opacity: 1;
   transition: all 0.3s ease-in-out;
   background-color: #ffffff;
@@ -51,6 +53,7 @@ nav a {
   font-weight: bold;
   color: #2c3e50;
    text-decoration: none;
+   
 }
 
 nav a.router-link-exact-active {
