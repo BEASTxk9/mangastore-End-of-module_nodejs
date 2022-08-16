@@ -272,6 +272,6 @@ button {
 }
 
 #delete, #update{
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 </style>
