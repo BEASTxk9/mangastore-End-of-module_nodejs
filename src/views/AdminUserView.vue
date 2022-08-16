@@ -33,7 +33,7 @@
         </div>
         <!-- table -->
         <div id="table1" class="col-sm-11">
-          <table class="table table-bordered">
+          <table class="table-fluid table-bordered">
             <thead>
               <th>ID</th>
               <th>fullname</th>
@@ -122,6 +122,11 @@ export default {
 #admin{
   margin-top: 10px;
 }
+
+table{
+  overflow-x: scroll;
+}
+
 
 #table {
   border-left: 0.3px solid rgba(128, 128, 128, 0.282);
@@ -228,7 +233,7 @@ img {
   transition: 0.3s;
   overflow: hidden;
   font-weight: bold;
-   text-decoration: line-through;
+   text-decoration: none;
 }
 
 .btn-layout:hover {

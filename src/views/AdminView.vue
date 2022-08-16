@@ -34,7 +34,7 @@
         </div>
         <!-- table -->
         <div id="table1" class="col-sm-11">
-          <table class="table table-bordered">
+          <table class="table-fluid table-bordered">
             <thead>
               <th>ID</th>
               <th>Title</th>
@@ -134,6 +134,11 @@ export default {
 <style scoped>
 #admin{
   padding-top: 10px;
+  overflow-x: scroll;
+}
+
+table{
+  overflow-x: scroll;
 }
 
 #table {
@@ -240,7 +245,7 @@ img {
   transition: 0.3s;
   overflow: hidden;
   font-weight: bold;
-  text-decoration: line-through;
+  text-decoration: none;
 }
 
 .btn-layout:hover {
