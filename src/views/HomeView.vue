@@ -70,7 +70,6 @@ body {
   border: 0.5px solid grey;
   border-radius: 10px;
   gap: 10px;
-  padding-bottom: 10px;
   padding-top: 5px;
   height: 66vh;
 }
