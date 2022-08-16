@@ -83,6 +83,11 @@ export default {
 </script>
 
 <style scoped>
+
+body{
+  padding-top: 130px;
+}
+
 #sec{
   margin-top: 130px;
 }

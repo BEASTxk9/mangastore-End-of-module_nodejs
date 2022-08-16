@@ -39,6 +39,7 @@ nav {
   padding: 35px;
  background-color: white;
  border-bottom: solid rgb(203,95,159) ;
+  padding: 15px;
   opacity: 1;
   transition: all 0.3s ease-in-out;
   background-color: #ffffff;

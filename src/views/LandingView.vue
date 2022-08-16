@@ -1,21 +1,15 @@
 <template>
   <Navbar></Navbar>
-  <div id="sec">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://i.postimg.cc/xdwbgMZJ/monkey-d-luffy-manga-b-Gls-Z26-Um-Zqara-Wkp-JRob-Wllr-Wdma2-U.jpg" class="d-block " alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://i.postimg.cc/KzmmZYkp/1000783.jpg" class="d-block" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://i.postimg.cc/0211xQTY/4022340.png" class="d-block " alt="...">
-    </div>
-  </div>
+<div id="sec">
+  hello
+    
 </div>
-</div>
+
+
 </template>
+    <!-- https://i.postimg.cc/xdwbgMZJ/monkey-d-luffy-manga-b-Gls-Z26-Um-Zqara-Wkp-JRob-Wllr-Wdma2-U.jpg 
+    https://i.postimg.cc/KzmmZYkp/1000783.jpg
+    https://i.postimg.cc/0211xQTY/4022340.png -->
 
 <script>
 import Navbar from '../components/NavView.vue'
@@ -23,15 +17,15 @@ export default {
   components: {
 
     Navbar,
-  
-  },
-  
-  }
+    }}
+ 
 </script>
+
+
 
 <style scoped>
 #sec{
-  margin-top: 115px;
+  padding-top: 130px;
 }
 
 #quote-carousel .carousel-indicators .active 
@@ -56,11 +50,16 @@ export default {
     float: left;
     margin-right: 10px;
 }
+
 img{
   height: 100vh;
   width: 250vh;
   object-fit: cover;
 }
+
+
+
+
 
 
 

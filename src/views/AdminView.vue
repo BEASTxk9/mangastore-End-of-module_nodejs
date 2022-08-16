@@ -127,7 +127,7 @@ export default {
 
 <style scoped>
 #admin{
-  margin-top: 130px;
+  padding-top: 130px;
 }
 
 #table {

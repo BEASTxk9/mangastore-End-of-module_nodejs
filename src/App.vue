@@ -44,7 +44,7 @@
             </li>
           <!--<li><a href="#">About</a></li>          -->
         </ul>
-      </div>
+      </div> 
       
       <div class="offset-md-3 col-md-3">
         <img src="https://i.postimg.cc/Fs8d1GdF/Logo-Sample-By-Tailor-Brands.png" class="img-fluid footer-logo">
@@ -86,8 +86,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   text-align: center;
   color: #2c3e50;
 }
+ 
+
+
 /* scroll */
 /* width */
+
 ::-webkit-scrollbar {
     width: 100%;
     background-color: transparent;

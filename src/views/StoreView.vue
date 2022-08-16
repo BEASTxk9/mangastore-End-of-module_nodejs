@@ -34,11 +34,18 @@ components: {
   card,
   Navbar
 },
+mounted(){
+  this.$store.commit('setproduct', null)
+}
 }
 </script>
+
+
+
 
 <style scoped>
 #sec{
   margin-top: 130px;
+
 }
 </style>

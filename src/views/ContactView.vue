@@ -40,6 +40,7 @@ export default {
 
 <style scoped>
 #sec{
-  margin-top: 130px;
+  padding-top: 130px;
 }
+
 </style>
