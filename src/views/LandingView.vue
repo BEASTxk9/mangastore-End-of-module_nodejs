@@ -69,13 +69,13 @@ export default {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  /* background-color: rgba(203, 95, 160, 0.83); */
-  /* From https://css.glass */
-background: rgba(203, 95, 160,0.50);
+    background: rgba(209, 208, 208, 0.5);
+border-radius: 10px;
+box-shadow: 0 4px 30px rgba(205, 205, 205, 0.1);
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(2.4px);
 -webkit-backdrop-filter: blur(2.4px);
-border: 1px solid rgba(203, 95, 160, 0.3);
+border: 0.5px solid rgba(203, 95, 160, 0.3);
  margin-left: 80px;
 }
 h2{
