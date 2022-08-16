@@ -38,7 +38,7 @@
               <th>description</th>
               <th>price</th>
               <th>datereleased</th>
-              <th>created_by</th>
+              <th>createdby</th>
               <th>Actions</th>
             </thead>
             <tbody>
@@ -153,6 +153,7 @@ thead {
 }
 
 th {
+  font-size: 1rem;
   padding: 5px;
   border-top: none;
   border-left: 0.3px solid rgba(128, 128, 128, 0.282);
