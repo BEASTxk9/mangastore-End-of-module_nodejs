@@ -275,7 +275,7 @@ router.get("/users", (req, res) => {
 
 });
 
-// get 1 product
+// get 1 user
 router.get('/users/:id', (req, res) => {
     // mysql query
     const strQry = `
