@@ -1,6 +1,6 @@
 <template>
   <Navbar></Navbar>
-  <div class="container">
+  <div id="sec" class="container">
     <h1>Manga Catalogue</h1>
     <card></card>
   </div>
@@ -17,6 +17,8 @@ components: {
 }
 </script>
 
-<style>
-
+<style scoped>
+#sec{
+  margin-top: 130px;
+}
 </style>

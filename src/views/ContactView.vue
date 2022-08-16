@@ -1,6 +1,6 @@
 <template>
 <Navbar></Navbar>
-<div class="container">
+<div id="sec" class="container">
   <h1>We would love to hear from you</h1>
   <div>
     
@@ -19,5 +19,7 @@ export default {
 </script>
 
 <style scoped>
-
+#sec{
+  margin-top: 130px;
+}
 </style>

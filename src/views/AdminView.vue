@@ -105,38 +105,15 @@ export default {
       return this.$store.state.products;
     },
   },
-  // data() {
-  //   return {
-  //         title: "",
-  //       bookName: "",
-  //       category: "",
-  //       description: "",
-  //       img: "",
-  //       price: "",
-  //       datereleased: "",
-  //       created_by: "",
-  //       img2: "",
-  //   };
-  // },
-  // methods: {
-  //   deleteProduct() {
-  //     this.$store.dispatch("deleteProduct", {
-  //    title: this.title,
-  //     bookName: this.bookName,
-  //     category: this.category,
-  //     description: this.description,
-  //     img: this.img,
-  //     price: this.price,
-  //     datereleased: this.datereleased,
-  //     created_by: this.created_by,
-  //     img2: this.img2,
-  //     });
-  //   },
-  // },
+ 
 };
 </script>
 
 <style scoped>
+#admin{
+  margin-top: 130px;
+}
+
 #table {
   border-left: 0.3px solid rgba(128, 128, 128, 0.282);
   border-top: 0.3px solid rgba(128, 128, 128, 0.282);

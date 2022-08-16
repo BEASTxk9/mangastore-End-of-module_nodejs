@@ -1,6 +1,6 @@
 <template>
   <Navbar></Navbar>
-  
+  <div id="sec">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -14,7 +14,7 @@
     </div>
   </div>
 </div>
-
+</div>
 </template>
 
 <script>
@@ -30,12 +30,9 @@ export default {
 </script>
 
 <style scoped>
-
-
-
-
-
-
+#sec{
+  margin-top: 115px;
+}
 
 #quote-carousel .carousel-indicators .active 
 {
@@ -64,10 +61,7 @@ img{
   width: 250vh;
   object-fit: cover;
 }
-body{
-  padding-top: -130px;
-  
-}
+
 
 
 

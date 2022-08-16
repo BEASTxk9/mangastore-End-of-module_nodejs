@@ -1,6 +1,6 @@
 <template>
 <Navbar></Navbar>
-    <div v-if="product">
+    <div id="sec" v-if="product">
         <div class="container">
             <h1>{{ product[0].title }} {{ product[0].bookName }}</h1>
             <div class="row mx-auto">
@@ -62,6 +62,10 @@ export default {
 </script>
 
 <style scoped>
+#sec{
+  margin-top: 130px;
+}
+
 .card{
     background-color: transparent;
 }

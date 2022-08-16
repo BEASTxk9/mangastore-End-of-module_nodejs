@@ -56,7 +56,7 @@ this.$store.dispatch('login', {
   position: relative;
   margin-top: 10px;
   padding: 8px 16px;
-  background: #009579;
+ background-color: rgb(203,95,159);
   border: none;
   outline: none;
   border-radius: 2px;
@@ -64,7 +64,7 @@ this.$store.dispatch('login', {
 }
 
 .button:active {
-  background: #007a63;
+background-color: rgb(203,95,159);
 }
 
 .button__text {
