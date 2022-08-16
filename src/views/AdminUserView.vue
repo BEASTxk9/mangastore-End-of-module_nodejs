@@ -13,7 +13,7 @@
         </div>
         <!-- _________ -->
         <div id="table" class="col-sm-9 d-flex justify-content-end">
-          <img src="https://i.postimg.cc/zDx3C6R9/logo.jpg" class="img-fluid  " style="height:50px;">
+        <span class="mt-3 fw-bold">USERS</span> <img src="https://i.postimg.cc/zDx3C6R9/logo.jpg" class="img-fluid  " style="height:50px;">
         </div>
       </div>
 
