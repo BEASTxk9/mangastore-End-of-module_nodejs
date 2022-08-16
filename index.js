@@ -138,24 +138,24 @@ console.log(err)
 });
 
 // Update product
-app.put('/products/:id', (req, res)=> {
-    const bd = req.body;
-    // Query
-    const strQry = 
-    `UPDATE products
-     SET ?
-     WHERE title = ?, bookName = ?, category = ?, description = ?, img = ?, price = ?, datereleased = ?, created_by = ?, img2 = ?`;
+// router.put('/products/:id', (req, res)=> {
+//     const bd = req.body;
+//     // Query
+//     const strQry = 
+//     `UPDATE products
+//      SET ?
+//      WHERE title = ?, bookName = ?, category = ?, description = ?, img = ?, price = ?, datereleased = ?, created_by = ?, img2 = ?`;
 
-     db.query(strQry, 
-        [bd.title, bd.bookName, bd.category, bd.description, bd.img, bd.price, bd.datereleased, bd.created_by, bd.img2],
-        (err, results)=> {
-            if(err){
-console.log(err)
-            } else{
-                res.send(`number of affected row/s: ${results.affectedRows}`);
-            }
-    })
-});
+//      db.query(strQry, 
+//         [bd.title, bd.bookName, bd.category, bd.description, bd.img, bd.price, bd.datereleased, bd.created_by, bd.img2],
+//         (err, results)=> {
+//             if(err){
+// console.log(err)
+//             } else{
+//                 res.send(`number of affected row/s: ${results.affectedRows}`);
+//             }
+//     })
+// });
 
 // Delete product
 app.delete("/products/:id", (req, res) => {
@@ -170,6 +170,21 @@ app.delete("/products/:id", (req, res) => {
         res.send(`${data.affectedRows} PRODUCT/S WAS DELETED`);
     });
 });
+
+// Update product
+router.put("/products/:id", bodyParser.json(), async (req, res) => {
+    const { title, bookName, category, description, img, price, datereleased, created_by, img2 } = req.body;
+    let sql = `UPDATE products SET ? WHERE Product_id = ${req.params.id} `;
+    const product = {
+        title, bookName, category, description, img, price, datereleased, created_by, img2
+    };
+    db.query(sql, product, (err) => {
+      if (err) throw err;
+      res.json({
+        msg: "Updated Item Successfully",
+      });
+    });
+  });
 
 
 // ___________________
