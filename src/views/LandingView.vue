@@ -11,13 +11,14 @@
       <div class="row justify-content-center">
         <div class="col-sm-6 border-sm-0 pe-5 text-center">
           <div class="card">
+           <h2 class="fw-bold"> BEST SELLING MANAG:</h2>
             <img class=" img-fluid " id="img1" src="https://i.postimg.cc/B632dKgG/6786547-one-piece-4.jpg" alt="">
             <div class="shadow"></div>
           </div>
         </div>
         <div id="text" class="col-sm-6 order-sm-1 d-flex flex-column justify-content-center p-lg-5">
-          <h1 class="text text-center">Unlimited Void</h1>
-          <h2><u>Bringing Manga To You</u></h2>
+          <h1 class="fw-bold text-center">Unlimited Void</h1>
+          <h4 class="fw-bold"><u>Bringing Manga To You</u></h4>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro impedit sapiente, adipisci explicabo tempore
           optio a asperiores incidunt quasi vitae laudantium laboriosam libero in rerum distinctio facere debitis
           reiciendis
