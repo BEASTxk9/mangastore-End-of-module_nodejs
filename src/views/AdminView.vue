@@ -132,6 +132,7 @@ export default {
 </script>
 
 <style scoped>
+
 #admin{
   padding-top: 10px;
   overflow-x: scroll;
@@ -269,5 +270,18 @@ button {
 
 #delete, #update{
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 576px) { 
+#sidenav{
+	font-size: 10px;
+}
+}
+
+
+@media screen and (max-width: 345px) { 
+#sidenav{
+	font-size: 8px;
+}
 }
 </style>
