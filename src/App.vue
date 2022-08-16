@@ -101,12 +101,21 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 /* ///// */
 .footer {
-
     padding: 50px;
-   
      border-top: solid rgb(203,95,159) ;
-
 }
+
+footer a{
+  color: grey;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+footer a:hover{
+  color: rgb(203,95,159) ;
+}
+
 li{
   padding-top: 18px;
 }

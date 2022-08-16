@@ -3,20 +3,20 @@
 <div id="sec">
 
   <div class="back">
-    <div class="container">
+    <div class="container-fluid">
     <div class="landing">
       <br>
           <br>
           <br>
-      <div class="row">
-        <div class="col-sm-6 order-sm-0 pe-5">
+      <div class="row justify-content-center">
+        <div class="col-sm-6 border-sm-0 pe-5 text-center">
           <div class="card">
             <img class=" img-fluid " id="img1" src="https://i.postimg.cc/B632dKgG/6786547-one-piece-4.jpg" alt="">
             <div class="shadow"></div>
           </div>
         </div>
         <div id="text" class="col-sm-6 order-sm-1 d-flex flex-column justify-content-center p-lg-5">
-          <h1 class="text mx-auto">Unlimited Void</h1>
+          <h1 class="text text-center">Unlimited Void</h1>
           <h2><u>Bringing Manga To You</u></h2>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro impedit sapiente, adipisci explicabo tempore
           optio a asperiores incidunt quasi vitae laudantium laboriosam libero in rerum distinctio facere debitis
@@ -76,7 +76,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(2.4px);
 -webkit-backdrop-filter: blur(2.4px);
 border: 0.5px solid rgba(203, 95, 160, 0.3);
- margin-left: 80px;
+ /* margin-left: 80px; */
 }
 h2{
   font-size: 45px;
@@ -197,6 +197,28 @@ img{
 }
 
 
+@media screen and (max-width: 866px) {
+  .card{
+  width: 300px;
+  height: 530px;
+}
 
+.text{
+  color: rgb(203, 95, 160);
+   background-color: black;
+   width: 300px;
+   padding: 5px;
+   border-radius: 10px;
+   font-size:50px;
+    margin-bottom: 50vh;
+}
+
+.back{
+  background-image: url("https://i.postimg.cc/xdwbgMZJ/monkey-d-luffy-manga-b-Gls-Z26-Um-Zqara-Wkp-JRob-Wllr-Wdma2-U.jpg");
+  height: 92vh;
+  width: 100%;
+     margin-bottom: 170vh;
+}
+ }
 
 </style>
