@@ -95,7 +95,8 @@ body{
 }
 
 #card {
-  background-color: antiquewhite;
+      background: rgba(209, 208, 208, 0.5);
+box-shadow: 0 4px 30px rgba(205, 205, 205, 0.1);
   border: 0.5px solid grey;
   border-radius: 10px;
   gap: 10px;
@@ -110,6 +111,7 @@ body{
 
 .typewriter-text{
   font-size: 5rem;
+  color: rgb(238, 238, 238);
 }
 
 /* landing */
