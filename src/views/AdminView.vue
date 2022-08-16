@@ -1,5 +1,5 @@
 <template>
-  <Navbar></Navbar>
+
   <section id="admin">
     <div id="con" class="container" v-if="products">
       <!-- nav -->
@@ -23,7 +23,11 @@
         <!-- side nav -->
         <div id="sidenav" class="col-sm-1 text-start">
           <nav>
-            <a href="#">hello</a>
+               <router-link class="b btn-layout" to="/landing">Home</router-link> 
+    <router-link class="b btn-layout" to="/about">About</router-link> 
+    <router-link class="b btn-layout" to="/store">Shop</router-link> 
+    <router-link class="b btn-layout" to="/contact">Contact</router-link>
+       <router-link class="b btn-layout" to="/">Logout</router-link> 
           </nav>
         </div>
         <!-- table -->
@@ -107,11 +111,11 @@
 
 <script>
 import addproduct from "../components/AddProductView.vue";
-import Navbar from "../components/NavView.vue";
+
 export default {
   components: {
     addproduct,
-    Navbar,
+ 
   },
   mounted() {
     this.$store.dispatch("getproducts");
@@ -127,7 +131,7 @@ export default {
 
 <style scoped>
 #admin{
-  padding-top: 130px;
+  padding-top: 10px;
 }
 
 #table {

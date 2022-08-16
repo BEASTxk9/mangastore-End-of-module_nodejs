@@ -1,5 +1,4 @@
 <template>
-  <Navbar></Navbar>
   <section id="admin">
     <div id="con" class="container" v-if="users">
       <!-- nav -->
@@ -10,7 +9,7 @@
         </div>
         <!-- __________ -->
         <div id="table" class="col-sm-2">
-          <addproduct></addproduct>
+         
         </div>
         <!-- _________ -->
         <div id="table" class="col-sm-9 d-flex justify-content-end">
@@ -23,7 +22,11 @@
         <!-- side nav -->
         <div id="sidenav" class="col-sm-1 text-start">
           <nav>
-            <a href="#">hello</a>
+               <router-link class="b btn-layout" to="/landing">Home</router-link> 
+    <router-link class="b btn-layout" to="/about">About</router-link> 
+    <router-link class="b btn-layout" to="/store">Shop</router-link> 
+    <router-link class="b btn-layout" to="/contact">Contact</router-link>
+       <router-link class="b btn-layout" to="/">Logout</router-link> 
           </nav>
         </div>
         <!-- table -->
@@ -96,12 +99,10 @@
 </template>
 
 <script>
-import addproduct from "../components/AddProductView.vue";
-import Navbar from "../components/NavView.vue";
+
 export default {
   components: {
-    addproduct,
-    Navbar,
+   
   },
   mounted() {
     this.$store.dispatch("getusers");
@@ -117,7 +118,7 @@ export default {
 
 <style scoped>
 #admin{
-  margin-top: 130px;
+  margin-top: 10px;
 }
 
 #table {

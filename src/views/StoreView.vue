@@ -2,6 +2,7 @@
   <Navbar></Navbar>
   <div v-if="true" id="sec" class="container">
     <h1>Manga Catalogue</h1>
+
     <card></card>
   </div>
 
@@ -28,7 +29,7 @@
 
 <script>
 import card from '../components/ProductsCardView.vue';
-import Navbar from '../components/NavView.vue'
+import Navbar from '../components/NavView.vue';
 export default {
 components: {
   card,
@@ -36,7 +37,7 @@ components: {
 },
 mounted(){
   this.$store.commit('setproduct', null)
-}
+},
 }
 </script>
 
