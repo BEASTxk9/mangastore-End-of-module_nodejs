@@ -45,7 +45,7 @@
               <th>price</th>
               <th>datereleased</th>
               <th>createdby</th>
-              <th>Actions</th>
+              <th class="px-2">Actions</th>
             </thead>
             <tbody>
               <tr v-for="(product, index) in products" :key="index">
@@ -68,13 +68,13 @@
                 <td>
 
                  <div class="row">
-                  <div class="col-sm-6">
+                  <div class="col-sm-5">
                     <button id="delete" class="b btn-layout" v-on:click="$store.dispatch('deleteProduct', product.Product_id)">
                       <i class="fa-solid fa-trash"></i>
                     </button>
                     </div>
 
-                  <div class="col-sm-6">
+                  <div class="col-sm-5">
                     <button id="update" class="b btn-layout" v-on:click="$store.dispatch('updateProduct', product.Product_id)">
                      <i class="fa-solid fa-pen-to-square"></i>
                     </button></div>

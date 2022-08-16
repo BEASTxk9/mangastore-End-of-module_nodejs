@@ -57,13 +57,13 @@
                 <td>
 
                  <div class="row">
-                  <div class="col-sm-6">
+                  <div class="col-sm-5">
                     <button id="delete" class="b btn-layout" v-on:click="$store.dispatch('deleteuser', user.id)">
                       <i class="fa-solid fa-trash"></i>
                     </button>
                     </div>
 
-                  <div class="col-sm-6">
+                  <div class="col-sm-5">
                     <button id="update" class="b btn-layout" v-on:click="$store.dispatch('updateuser', user.id)">
                      <i class="fa-solid fa-pen-to-square"></i>
                     </button></div>
