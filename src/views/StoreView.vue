@@ -2,7 +2,9 @@
   <Navbar></Navbar>
   <div v-if="true" id="sec" class="container">
     <h1>Manga Catalogue</h1>
+    <div class="mt-3">
 <input type="text" placeholder="Search"><button class="mx-1">Search</button>
+</div>
     <card></card>
   </div>
 
