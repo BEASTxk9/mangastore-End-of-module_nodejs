@@ -1,7 +1,7 @@
 <template>
   <Navbar></Navbar>
 <div id="sec">
-  hello
+
     
 </div>
 
