@@ -27,6 +27,8 @@
     <router-link class="b btn-layout" to="/store">Shop</router-link> 
     <router-link class="b btn-layout" to="/contact">Contact</router-link>
        <router-link class="b btn-layout" to="/">Logout</router-link> 
+       <router-link class="b btn-layout" to="/admin"><i class="fa-solid fa-bag-shopping"></i></router-link> 
+	<router-link class="b btn-layout" to="/adminuser"><i class="fa-solid fa-user"></i></router-link>
           </nav>
         </div>
         <!-- table -->
@@ -203,7 +205,6 @@ img {
 
 .b:hover:before {
   color: rgb(255, 255, 255);
-  box-shadow: 12px 31px 37px rgba(255, 255, 255, 0.5);
   width: 100%;
   left: auto;
   right: 0;
@@ -226,9 +227,12 @@ img {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   overflow: hidden;
+  font-weight: bold;
+   text-decoration: line-through;
 }
 
 .btn-layout:hover {
+     text-decoration: none;
   color: rgb(255, 255, 255);
   transition: all 0.5s ease-in-out;
   box-shadow: 0px 0px 50px 3px rgb(203,95,159);
