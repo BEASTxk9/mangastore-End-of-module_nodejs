@@ -3,7 +3,10 @@
 <Nav></Nav>
 
   <router-view/>
+  <div>
 
+    
+  </div>
 <footer>
 <div class="footer">
   <div class="container">
@@ -53,9 +56,10 @@
       </div>
     </div>
   </div>
+
 </div>
  </footer>
-
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 </template>
 
 <script>
@@ -317,4 +321,15 @@ li{
 .fade-enter-active{
     transition: all 2s ease;
 }
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    color: black;
+}
+
+
 </style>

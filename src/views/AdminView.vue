@@ -40,7 +40,7 @@
               <th>Title</th>
               <th>bookName</th>
               <th>img</th>
-              <th>category</th>
+              <th>category</th>-
               <th>description</th>
               <th>price</th>
               <th>datereleased</th>
@@ -273,19 +273,6 @@ button {
 }
 
 #delete, #update{
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width: 576px) { 
-#sidenav{
-	font-size: 10px;
-}
-}
-
-
-@media screen and (max-width: 345px) { 
-#sidenav{
-	font-size: 8px;
-}
+  font-size: 1.4rem;
 }
 </style>
