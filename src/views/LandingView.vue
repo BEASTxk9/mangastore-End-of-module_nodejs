@@ -24,7 +24,9 @@ export default {
 
     Navbar,
   
-  }}
+  },
+  
+  }
 </script>
 
 <style scoped>

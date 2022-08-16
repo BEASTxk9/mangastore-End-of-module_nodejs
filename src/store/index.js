@@ -68,6 +68,7 @@ login: async(context, payload) => {
     alert('Welcome')
   } else {
     alert('Password or Email is wrong. Please try again.')
+    router.push({name: "home"})
   }
 },
 
@@ -133,7 +134,24 @@ deleteProduct: async (context, Product_id) => {
   }) 
   .then((res) => res.json())
   .then(() => context.dispatch('getproducts'), alert('Delete was successfull! Refresh the page.'));
-}
+},
+
+// updates list
+    updateProduct: async (context, product) => {
+      // fetch("http://localhost:3000/products/" + product.id, {
+      fetch("https://mangastore-end-of-module.herokuapp.com/products/" + product.Product_id, {
+          method: "PUT",
+          body: JSON.stringify(product),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.msg);
+          context.dispatch("getProducts");
+        });
+    },
 
   },
   modules: {

@@ -60,12 +60,22 @@
                 <td>{{ product.datereleased }}</td>
                 <td>{{ product.created_by }}</td>
                 <td>
-                 
+
+                 <div class="row">
+                  <div class="col-sm-6">
                     <button id="delete" class="b btn-layout" v-on:click="$store.dispatch('deleteProduct', product.Product_id)">
                       <i class="fa-solid fa-trash"></i>
                     </button>
+                    </div>
 
+                  <div class="col-sm-6">
+                    <button id="update" class="b btn-layout" v-on:click="$store.dispatch('updateProduct', product.Product_id)">
+                     <i class="fa-solid fa-pen-to-square"></i>
+                    </button></div>
+                 </div>
+                   
                 </td>
+
               </tr>
             </tbody>
           </table>
@@ -250,7 +260,7 @@ button {
   font-size: 12px;
 }
 
-#delete{
+#delete, #update{
   font-size: 1.5rem;
 }
 </style>
