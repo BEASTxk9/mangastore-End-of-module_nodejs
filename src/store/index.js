@@ -72,6 +72,55 @@ login: async(context, payload) => {
   }
 },
 
+// get user
+getusers: async (context) => {
+  let res = await fetch('https://mangastore-end-of-module.herokuapp.com/users');
+  let data = await res.json();
+  let result = data.results;
+  if(result){
+    context.commit('setUsers', result)
+  }else{
+    console.log('loading...')
+  }
+},
+
+// get single user
+getuser: async (context, id) => {
+
+  fetch('https://mangastore-end-of-module.herokuapp.com/users/' + id)
+  .then((res) => res.json())
+  .then((data) =>{
+  console.log(data)
+    context.commit("setUsers", data.results);
+  })
+},
+
+// delete user
+deleteuser: async (context, id) => {
+  fetch("https://mangastore-end-of-module.herokuapp.com/users/" + id, {
+    method: "DELETE",
+  }) 
+  .then((res) => res.json())
+  .then(() => context.dispatch('getUsers'), alert('Delete was successfull! Refresh the page.'));
+},
+
+// updates user
+    updateuser: async (context, user) => {
+      // fetch("http://localhost:3000/products/" + product.id, {
+      fetch("https://mangastore-end-of-module.herokuapp.com/users/" + user.id, {
+          method: "PUT",
+          body: JSON.stringify(product),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.msg);
+          context.dispatch("getUsers");
+        });
+    },
+
 // _______________
 // get products
 getproducts: async (context) => {

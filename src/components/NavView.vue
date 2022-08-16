@@ -7,6 +7,7 @@
     <router-link class="b btn-layout" to="/about">About</router-link> 
     <router-link class="b btn-layout" to="/store">Shop</router-link> 
     <router-link class="b btn-layout" to="/admin">Admin</router-link> 
+	<router-link class="b btn-layout" to="/adminuser">Admin User</router-link>
     <router-link class="b btn-layout" to="/contact">Contact</router-link>
        <router-link class="b btn-layout" to="/">Logout</router-link> 
 
