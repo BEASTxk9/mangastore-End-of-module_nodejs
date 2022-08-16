@@ -127,6 +127,9 @@ export default {
 </script>
 
 <style scoped>
+body{
+  padding-top: 130px;
+}
 #table {
   border-left: 0.3px solid rgba(128, 128, 128, 0.282);
   border-top: 0.3px solid rgba(128, 128, 128, 0.282);

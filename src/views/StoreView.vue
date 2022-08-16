@@ -14,9 +14,14 @@ components: {
   card,
   Navbar
 },
+mounted(){
+  this.$store.commit('setproduct', null)
+}
 }
 </script>
 
 <style>
-
+body{
+  padding-top: 130px;
+}
 </style>

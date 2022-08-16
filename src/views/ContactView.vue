@@ -19,5 +19,7 @@ export default {
 </script>
 
 <style scoped>
-
+body{
+  padding-top: 130px;
+}
 </style>

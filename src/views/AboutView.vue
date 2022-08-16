@@ -41,6 +41,9 @@ export default {
 </script>
 
 <style scoped>
+body{
+  padding-top: 130px;
+}
 img{
   width: 410px;
   /* height: 450px; */

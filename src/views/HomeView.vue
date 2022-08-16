@@ -39,6 +39,10 @@ export default {
 <style scoped>
 body {
   overflow-x: none;
+
+}
+body{
+  padding-top: 130px;
 }
 
 #login_register {
