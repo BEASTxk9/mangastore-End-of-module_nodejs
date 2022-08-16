@@ -94,6 +94,11 @@ background-color: rgb(203,95,159);
   animation: button-loading-spinner 1s ease infinite;
 }
 
+input{
+  border-radius: 5px;
+  border: none;
+}
+
 @keyframes button-loading-spinner {
   from {
     transform: rotate(0turn);

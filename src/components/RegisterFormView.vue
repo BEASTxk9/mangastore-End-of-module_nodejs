@@ -80,6 +80,16 @@ select, #join_date{
     padding-bottom: 3px;
 }
 
+input{
+  border-radius: 5px;
+   border: none;
+}
+
+select{
+     border-radius: 5px;
+   border: none;
+}
+
 /* button */
 .button {
   position: relative;
